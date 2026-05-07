@@ -1,0 +1,2894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avineesh Parjapati | Quantity Surveyor & Cost Consultant</title>
+<meta name="description" content="Civil Engineer specializing in BIM-based Quantity Takeoff, BOQ Preparation, and Cost Optimization for High-Rise & Large-Scale Projects. Currently at Grant Thornton Bharat LLP.">
+<meta name="keywords" content="Quantity Surveyor, Cost Consultant, BIM, Revit, BOQ, Civil Engineer, India, Grant Thornton, Godrej Properties">
+<meta property="og:title" content="Avineesh Parjapati | QS & Cost Consultant">
+<meta property="og:description" content="BIM-based Quantity Takeoff & Cost Optimization specialist. 2.5+ years | Godrej Properties | M3M India | Grant Thornton.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   ROOT & RESET
+═══════════════════════════════════════════════ */
+:root {
+  --navy:        #080f1e;
+  --navy-mid:    #0e1d38;
+  --navy-card:   #0b1729;
+  --navy-hover:  #112040;
+  --gold:        #c9a84c;
+  --gold-light:  #e8c97a;
+  --gold-dim:    rgba(201,168,76,0.13);
+  --gold-border: rgba(201,168,76,0.22);
+  --slate:       #8892a4;
+  --slate-light: #ccd6f6;
+  --white:       #eef2ff;
+  --green:       #64ffda;
+  --green-dim:   rgba(100,255,218,0.07);
+  --green-border:rgba(100,255,218,0.25);
+  --font-serif:  'Playfair Display', Georgia, serif;
+  --font-sans:   'DM Sans', system-ui, sans-serif;
+  --font-mono:   'DM Mono', monospace;
+  --transition:  0.27s cubic-bezier(0.4,0,0.2,1);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family: var(--font-sans);
+  background: var(--navy);
+  color: var(--slate-light);
+  overflow-x: hidden;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color:inherit; }
+
+
+/* ═══════════════════════════════════════════════
+   SECTION CANVAS BACKGROUNDS
+═══════════════════════════════════════════════ */
+.section-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; z-index: 0;
+  opacity: 0.65;
+}
+#about, #skills, #certs, #projects, #why, #services, #tools, #contact {
+  position: relative; overflow: hidden;
+}
+#about > *:not(.section-canvas),
+#skills > *:not(.section-canvas),
+#certs > *:not(.section-canvas),
+#projects > *:not(.section-canvas),
+#why > *:not(.section-canvas),
+#why .why-inner,
+#services > *:not(.section-canvas),
+#tools > *:not(.section-canvas),
+#contact > *:not(.section-canvas) {
+  position: relative; z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════
+   ANIMATED HEADINGS
+═══════════════════════════════════════════════ */
+.s-title {
+  background: linear-gradient(120deg, var(--white) 0%, var(--gold-light) 40%, var(--white) 60%, var(--gold) 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleShimmer 5s linear infinite;
+}
+@keyframes titleShimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 250% center; }
+}
+.s-label {
+  animation: labelFadeSlide 0.8s ease both;
+}
+@keyframes labelFadeSlide {
+  from { opacity: 0; transform: translateX(-18px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+/* Hero name shimmer */
+h1.hero-name {
+  background: linear-gradient(120deg, var(--white) 0%, var(--gold-light) 35%, var(--white) 55%, var(--white) 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleShimmer 6s linear infinite;
+}
+h1.hero-name em {
+  background: linear-gradient(120deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: normal;
+  display: block;
+  animation: titleShimmer 4s linear infinite;
+}
+
+/* Typed cursor on hero eyebrow */
+.hero-eyebrow::after {
+  content: '|';
+  color: var(--gold);
+  margin-left: 3px;
+  animation: cursorBlink 1.1s step-end infinite;
+}
+@keyframes cursorBlink {
+  0%,100% { opacity: 1; } 50% { opacity: 0; }
+}
+
+/* Section number counter pop */
+.proj-number {
+  animation: numberPop 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes numberPop {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Stat numbers count-up glow */
+.stat-n, .m-val, .r-pill-n {
+  animation: statGlow 3s ease-in-out infinite alternate;
+}
+@keyframes statGlow {
+  from { text-shadow: 0 0 0px transparent; }
+  to   { text-shadow: 0 0 18px rgba(201,168,76,0.45); }
+}
+
+/* Gold rule draw */
+.gold-rule {
+  animation: ruleGrow 1.2s cubic-bezier(0.4,0,0.2,1) both;
+  transform-origin: left;
+}
+@keyframes ruleGrow {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+
+/* Card hover lift + border glow */
+.why-card, .svc-card, .t-card, .cert-card, .sk-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.why-card:hover, .cert-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(201,168,76,0.12);
+}
+
+/* Timeline dot pulse */
+.tl-dot {
+  animation: tlDotPulse 2s ease-in-out infinite;
+}
+@keyframes tlDotPulse {
+  0%,100% { box-shadow: 0 0 8px rgba(201,168,76,0.4); }
+  50%     { box-shadow: 0 0 20px rgba(201,168,76,0.85), 0 0 40px rgba(201,168,76,0.2); }
+}
+
+/* Availability dot */
+.avail-dot {
+  animation: availPulse 1.8s ease-in-out infinite;
+}
+@keyframes availPulse {
+  0%,100% { transform: scale(1);   box-shadow: 0 0 0 0 rgba(100,255,218,0.5); }
+  50%     { transform: scale(1.3); box-shadow: 0 0 0 8px rgba(100,255,218,0); }
+}
+
+/* r-pill shimmer on hover */
+.r-pill {
+  transition: all 0.3s ease;
+}
+.r-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(100,255,218,0.15);
+}
+
+
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════════════ */
+#navbar {
+  position: fixed; top:0; width:100%; z-index:200;
+  padding: 20px 64px;
+  display: flex; align-items:center; justify-content:space-between;
+  background: rgba(8,15,30,0.88);
+  backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid var(--gold-border);
+  transition: padding var(--transition), background var(--transition);
+}
+#navbar.scrolled { padding: 13px 64px; background: rgba(8,15,30,0.98); }
+.nav-logo {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  display: flex; align-items:center; gap:14px;
+  position: relative;
+}
+.nav-logo-icon {
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+.nav-logo-text {
+  display: flex; flex-direction: column; gap: 4px;
+  line-height: 1;
+}
+.nav-logo-name {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.nav-logo-name span { color: var(--gold); }
+.nav-logo-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--slate);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: 6px;
+}
+.nav-logo-tag::before {
+  content: '';
+  width: 22px; height: 1px;
+  background: var(--gold);
+  opacity: 0.6;
+}
+@keyframes dotPulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.35; transform:scale(0.65); }
+}
+
+.nav-links { display:flex; gap:34px; list-style:none; }
+.nav-links a {
+  color: var(--slate);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color var(--transition);
+  position: relative;
+  padding-bottom: 3px;
+}
+.nav-links a::after {
+  content:'';
+  position:absolute; bottom:0; left:0;
+  width:0; height:1px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+.nav-right { display:flex; align-items:center; gap:16px; }
+.nav-cv-btn {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  text-decoration: none;
+  border: 1px solid rgba(204,214,246,0.18);
+  padding: 7px 16px;
+  transition: all var(--transition);
+}
+.nav-cv-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold-border);
+}
+.nav-cta {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 8px 22px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all var(--transition);
+  background: transparent;
+}
+.nav-cta:hover { background: var(--gold-dim); box-shadow: 0 0 22px rgba(201,168,76,0.18); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px;
+  cursor:pointer; padding:4px; background:none; border:none;
+}
+.hamburger span { width:22px; height:2px; background: var(--gold); display:block; transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+/* Mobile Menu */
+#mobileMenu {
+  display:none; position:fixed; inset:0; z-index:190;
+  background: rgba(8,15,30,0.98);
+  flex-direction:column; align-items:center; justify-content:center; gap:36px;
+  padding:80px 24px 40px;
+}
+#mobileMenu.open { display:flex; }
+#mobileMenu a {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 7vw, 2.4rem);
+  color: var(--white);
+  text-decoration:none;
+  transition: color var(--transition);
+}
+#mobileMenu a:hover { color: var(--gold); }
+.mobile-hire {
+  margin-top:12px;
+  border:1px solid var(--gold) !important;
+  color: var(--gold) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 40px;
+}
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+#heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+}
+#hero {
+  min-height: 100vh;
+  display: flex; align-items:center;
+  padding: 130px 64px 90px;
+  position: relative; overflow: hidden;
+}
+/* orbs removed — replaced by canvas */
+.hero-inner { position:relative; z-index:2; width:100%; display:flex; align-items:center; justify-content:space-between; gap:60px; }
+.hero-content { max-width:700px; }
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex; align-items:center; gap:14px;
+  margin-bottom: 26px;
+  animation: fadeUp 0.9s 0.0s ease both;
+}
+.hero-eyebrow::before { content:''; width:36px; height:1px; background: var(--gold); flex-shrink:0; }
+h1.hero-name {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6.5vw, 5.4rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.06;
+  margin-bottom: 6px;
+  animation: fadeUp 0.9s 0.12s ease both;
+}
+h1.hero-name em { color: var(--gold); font-style: normal; display: block; }
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.2vw, 1.45rem);
+  color: var(--slate);
+  font-weight: 400;
+  margin-bottom: 30px;
+  animation: fadeUp 0.9s 0.22s ease both;
+}
+.hero-desc {
+  font-size: 1.03rem;
+  color: var(--slate);
+  max-width: 580px;
+  line-height: 1.85;
+  margin-bottom: 44px;
+  animation: fadeUp 0.9s 0.32s ease both;
+}
+.hero-desc strong { color: var(--slate-light); font-weight:500; }
+.hero-desc mark { background: none; color: var(--gold); font-weight:500; }
+.hero-actions {
+  display:flex; gap:18px; flex-wrap:wrap;
+  animation: fadeUp 0.9s 0.42s ease both;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 38px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex; align-items:center; gap:8px;
+  transition: all var(--transition);
+  position: relative; overflow:hidden;
+}
+.btn-primary::after {
+  content:'';
+  position:absolute; top:0; left:-100%;
+  width:100%; height:100%;
+  background: rgba(255,255,255,0.18);
+  transition: left 0.4s ease;
+}
+.btn-primary:hover::after { left:100%; }
+.btn-primary:hover { box-shadow: 0 6px 28px rgba(201,168,76,0.4); transform: translateY(-2px); }
+.btn-outline {
+  border: 1px solid rgba(204,214,246,0.3);
+  color: var(--slate-light);
+  padding: 14px 38px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex; align-items:center; gap:8px;
+  transition: all var(--transition);
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-cv {
+  border: 1px solid var(--gold-border);
+  color: var(--gold);
+  padding: 14px 28px;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex; align-items:center; gap:8px;
+  transition: all var(--transition);
+  background: var(--gold-dim);
+}
+.btn-cv:hover {
+  background: rgba(201,168,76,0.22);
+  border-color: var(--gold);
+  box-shadow: 0 4px 20px rgba(201,168,76,0.2);
+  transform: translateY(-2px);
+}
+.mobile-cv {
+  font-family: var(--font-mono) !important;
+  font-size: 0.8rem !important;
+  color: var(--slate) !important;
+  border: 1px solid var(--gold-border) !important;
+  padding: 10px 32px !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.hero-stats {
+  display:flex; gap:44px; margin-top:56px;
+  animation: fadeUp 0.9s 0.52s ease both;
+  flex-wrap: wrap;
+}
+.stat { border-left: 2px solid var(--gold-border); padding-left:18px; }
+.stat-n {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  font-weight:700;
+  color: var(--gold);
+  display:block;
+  line-height:1;
+}
+.stat-l { font-size: 0.72rem; color: var(--slate); text-transform: uppercase; letter-spacing: 0.07em; margin-top:5px; display:block; }
+
+/* Hero sidebar badges */
+.hero-badges { display:flex; flex-direction:column; gap:14px; flex-shrink:0; animation: fadeLeft 0.9s 0.55s ease both; }
+@keyframes fadeLeft {
+  from { opacity:0; transform:translateX(32px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+.h-badge {
+  background: var(--navy-card);
+  border: 1px solid var(--gold-border);
+  padding: 18px 22px;
+  width: 230px;
+  position: relative;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.h-badge::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background: var(--gold); }
+.h-badge:hover { border-color: rgba(201,168,76,0.5); transform: translateX(-4px); }
+.h-badge-val { font-family: var(--font-serif); font-size: 1.45rem; color: var(--gold); font-weight:700; display:block; line-height:1.1; }
+.h-badge-label { font-size: 0.7rem; color: var(--slate); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; display:block; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(26px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.scroll-hint {
+  position:absolute; bottom:36px; left:50%;
+  transform:translateX(-50%);
+  z-index:1;
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  animation: fadeUp 1s 1.2s ease both;
+  pointer-events:none;
+}
+.scroll-hint span { font-family: var(--font-mono); font-size:0.62rem; color: var(--slate); letter-spacing:0.16em; text-transform:uppercase; }
+.scroll-line { width:1px; height:48px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollDrop 2s ease-in-out infinite; }
+@keyframes scrollDrop {
+  0% { transform:scaleY(0); transform-origin:top; }
+  50% { transform:scaleY(1); transform-origin:top; }
+  51% { transform:scaleY(1); transform-origin:bottom; }
+  100% { transform:scaleY(0); transform-origin:bottom; }
+}
+
+/* ═══════════════════════════════════════════════
+   SHARED SECTION STYLES
+═══════════════════════════════════════════════ */
+section { padding: 108px 64px; }
+.s-label {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: flex; align-items:center; gap:14px;
+  margin-bottom: 14px;
+}
+.s-label::after { content:''; width:60px; height:1px; background: var(--gold); opacity:0.35; }
+.s-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); color: var(--white); font-weight:700; line-height:1.18; margin-bottom: 16px; }
+.s-sub { color: var(--slate); font-size: 0.97rem; max-width: 540px; margin-bottom: 60px; line-height: 1.8; }
+.gold-rule { width:48px; height:2px; background:var(--gold); margin:22px 0; }
+
+/* Reveal on scroll */
+.reveal { opacity:0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-delay-1 { transition-delay:0.1s; }
+.reveal-delay-2 { transition-delay:0.2s; }
+.reveal-delay-3 { transition-delay:0.3s; }
+
+/* ═══════════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════════ */
+#about { background: var(--navy-mid); }
+.about-grid { display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items:start; }
+.about-body p { font-size: 0.96rem; color: var(--slate); line-height: 1.92; margin-bottom:20px; }
+.about-body p strong { color:var(--slate-light); font-weight:500; }
+.about-body p .highlight { color:var(--gold); }
+
+/* Timeline */
+.timeline { margin-top:44px; }
+.tl-item { display:flex; gap:0; margin-bottom:30px; position:relative; }
+.tl-spine { display:flex; flex-direction:column; align-items:center; width:36px; flex-shrink:0; }
+.tl-dot { width:10px; height:10px; border-radius:50%; background: var(--gold); box-shadow: 0 0 12px rgba(201,168,76,0.55); margin-top:6px; flex-shrink:0; z-index:1; }
+.tl-line { flex:1; width:1px; background: var(--gold-border); margin-top:4px; }
+.tl-item:last-child .tl-line { display:none; }
+.tl-body { padding-bottom:8px; }
+.tl-period { font-family: var(--font-mono); font-size: 0.67rem; color: var(--gold); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:4px; }
+.tl-role { font-size:0.95rem; color:var(--white); font-weight:600; margin-bottom:2px; }
+.tl-org { font-size:0.82rem; color:var(--slate); margin-bottom:4px; }
+.tl-detail { font-size:0.78rem; color:var(--slate); opacity:0.75; font-style:italic; }
+
+/* About right */
+.metrics-box {
+  background: var(--navy-card);
+  border: 1px solid var(--gold-border);
+  padding: 36px;
+  position:relative; overflow:hidden;
+  margin-bottom: 28px;
+}
+.metrics-box::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, var(--gold), transparent 70%); }
+.metrics-box-title { font-family: var(--font-mono); font-size:0.68rem; color:var(--gold); letter-spacing:0.16em; text-transform:uppercase; margin-bottom:28px; }
+.metrics-grid { display:grid; grid-template-columns:1fr 1fr; gap: 24px 20px; }
+.m-val { font-family: var(--font-serif); font-size:2rem; color:var(--gold); font-weight:700; display:block; line-height:1; }
+.m-label { font-size:0.72rem; color:var(--slate); margin-top:5px; line-height:1.5; }
+
+.clients-box { background: var(--navy-card); border: 1px solid var(--gold-border); padding: 28px 32px; }
+.clients-title { font-family: var(--font-mono); font-size:0.67rem; color:var(--gold); letter-spacing:0.16em; text-transform:uppercase; margin-bottom:18px; }
+.client-chips { display:flex; gap:10px; flex-wrap:wrap; }
+.chip {
+  border: 1px solid var(--gold-border);
+  padding: 7px 16px;
+  font-size:0.74rem;
+  color:var(--slate-light);
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  transition: all var(--transition);
+  font-family: var(--font-mono);
+}
+.chip:hover { border-color:var(--gold); color:var(--gold); background: var(--gold-dim); }
+
+/* ═══════════════════════════════════════════════
+   SKILLS
+═══════════════════════════════════════════════ */
+#skills {}
+.skills-wrapper { display:grid; grid-template-columns: repeat(3,1fr); gap:24px; }
+.sk-card {
+  background: var(--navy-card);
+  border: 1px solid var(--gold-border);
+  padding: 32px 28px;
+  transition: border-color var(--transition), transform var(--transition);
+  position:relative; overflow:hidden;
+}
+.sk-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:0; background: linear-gradient(0deg, var(--gold-dim), transparent); transition: height 0.38s ease; }
+.sk-card:hover { border-color: rgba(201,168,76,0.45); transform: translateY(-5px); }
+.sk-card:hover::after { height:100%; }
+.sk-icon { font-size:1.7rem; margin-bottom:18px; display:block; }
+.sk-name { font-family: var(--font-serif); color:var(--white); font-size:1.02rem; margin-bottom:20px; }
+.tag-cloud { display:flex; flex-wrap:wrap; gap:7px; }
+.tag { background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.22); color: var(--gold-light); font-size:0.69rem; padding: 5px 11px; letter-spacing:0.04em; font-family: var(--font-mono); transition: background var(--transition); }
+.tag:hover { background: rgba(201,168,76,0.18); }
+.tag-highlight {
+  background: rgba(100,255,218,0.07);
+  border-color: rgba(100,255,218,0.3);
+  color: var(--green);
+}
+.tag-highlight:hover { background: rgba(100,255,218,0.14); }
+.bar-list { list-style:none; }
+.bar-item { margin-bottom:15px; }
+.bar-header { display:flex; justify-content:space-between; font-size:0.8rem; color:var(--slate-light); margin-bottom:7px; }
+.bar-header em { font-style:normal; font-family: var(--font-mono); color:var(--gold); font-size:0.72rem; }
+.bar-track { height:3px; background: rgba(255,255,255,0.06); border-radius:2px; overflow:hidden; }
+.bar-fill { height:100%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius:2px; width:0%; transition: width 1.3s cubic-bezier(0.25,0.46,0.45,0.94); }
+
+/* ═══════════════════════════════════════════════
+   CERTIFICATIONS
+═══════════════════════════════════════════════ */
+#certs { background: var(--navy-mid); }
+.certs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.cert-card {
+  background: var(--navy-card);
+  border: 1px solid var(--gold-border);
+  padding: 22px 24px;
+  display:flex; gap:16px; align-items:flex-start;
+  transition: all var(--transition);
+}
+.cert-card:hover { border-color: rgba(201,168,76,0.45); transform: translateY(-3px); }
+.cert-icon { font-size:1.4rem; flex-shrink:0; margin-top:2px; }
+.cert-body {}
+.cert-name { font-size:0.87rem; color:var(--white); font-weight:500; margin-bottom:4px; line-height:1.4; }
+.cert-issuer { font-family: var(--font-mono); font-size:0.65rem; color:var(--gold); letter-spacing:0.08em; text-transform:uppercase; }
+
+/* ═══════════════════════════════════════════════
+   PROJECTS
+═══════════════════════════════════════════════ */
+#projects { background: var(--navy); }
+.projects-stack { display:flex; flex-direction:column; gap:56px; }
+
+.proj-card {
+  background: var(--navy-card);
+  border: 1px solid var(--gold-border);
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  position:relative; overflow:hidden;
+}
+.proj-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity:0; transition: opacity var(--transition); }
+.proj-card:hover { border-color: rgba(201,168,76,0.48); box-shadow: 0 24px 64px rgba(0,0,0,0.45); }
+.proj-card:hover::before { opacity:1; }
+
+.proj-left {
+  padding: 40px 28px;
+  background: rgba(201,168,76,0.025);
+  border-right: 1px solid var(--gold-border);
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.proj-type { display:inline-block; border: 1px solid var(--gold); color: var(--gold); font-size:0.64rem; padding: 4px 11px; font-family: var(--font-mono); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:20px; align-self:flex-start; }
+.proj-number { font-family: var(--font-serif); font-size:5.5rem; color: rgba(201,168,76,0.09); font-weight:700; line-height:1; margin-bottom:auto; }
+.proj-tools { display:flex; flex-wrap:wrap; gap:6px; margin-top:28px; }
+.proj-tool { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); font-size:0.63rem; color:var(--slate); padding: 4px 9px; font-family: var(--font-mono); }
+
+.proj-right { padding: 44px 48px; }
+.proj-client { font-family: var(--font-mono); font-size:0.67rem; color:var(--gold); letter-spacing:0.16em; text-transform:uppercase; margin-bottom:10px; display:flex; align-items:center; gap:10px; }
+.proj-client::before { content:'//'; color: rgba(201,168,76,0.4); }
+.proj-employer { font-family: var(--font-mono); font-size:0.62rem; color:var(--slate); letter-spacing:0.1em; margin-bottom:14px; }
+.proj-title { font-family: var(--font-serif); font-size: clamp(1.3rem, 2.5vw, 1.62rem); color:var(--white); font-weight:700; margin-bottom:30px; line-height:1.25; }
+
+/* Sub-projects (for M3M) */
+.sub-projects { margin-bottom:28px; }
+.sub-proj {
+  border: 1px solid var(--gold-border);
+  margin-bottom:12px;
+  overflow:hidden;
+}
+.sub-proj-header {
+  background: rgba(201,168,76,0.04);
+  padding: 12px 18px;
+  display:flex; align-items:center; gap:12px;
+  border-bottom: 1px solid var(--gold-border);
+}
+.sub-proj-tag { font-family: var(--font-mono); font-size:0.62rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; }
+.sub-proj-name { font-size:0.9rem; color:var(--white); font-weight:500; }
+.sub-proj-body { padding:14px 18px; font-size:0.83rem; color:var(--slate); line-height:1.75; }
+.sub-proj-body strong { color:var(--slate-light); font-weight:500; }
+
+.proj-cols { display:grid; grid-template-columns: repeat(3,1fr); gap:24px; margin-bottom:32px; }
+.proj-col {}
+.proj-col-label { font-family: var(--font-mono); font-size:0.63rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:9px; opacity:0.75; }
+.proj-col p { font-size:0.84rem; color:var(--slate); line-height:1.75; }
+.proj-col p strong { color:var(--slate-light); font-weight:500; }
+
+.proj-results { border-top: 1px solid var(--gold-border); padding-top:28px; display:flex; flex-wrap:wrap; gap:16px; }
+.r-pill { background: var(--green-dim); border: 1px solid var(--green-border); padding: 12px 20px; display:flex; align-items:center; gap:12px; transition: background var(--transition); }
+.r-pill:hover { background: rgba(100,255,218,0.12); }
+.r-pill-n { font-family: var(--font-serif); font-size:1.35rem; color:var(--green); font-weight:700; line-height:1; }
+.r-pill-l { font-size:0.72rem; color:var(--slate); line-height:1.35; }
+
+/* ═══════════════════════════════════════════════
+   WHY HIRE ME
+═══════════════════════════════════════════════ */
+#why {
+  background: var(--navy-mid);
+  padding: 80px 64px;
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+}
+.why-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns: 1fr 2fr; gap:80px; align-items:center; }
+.why-right { display:grid; grid-template-columns:1fr 1fr; gap:2px; background: var(--gold-border); }
+.why-card { background: var(--navy-card); padding: 32px 28px; transition: background var(--transition); }
+.why-card:hover { background: var(--navy-hover); }
+.why-card-icon { font-size:1.5rem; margin-bottom:14px; }
+.why-card-title { font-family: var(--font-serif); font-size:1rem; color:var(--white); margin-bottom:10px; }
+.why-card p { font-size:0.83rem; color:var(--slate); line-height:1.75; }
+
+/* ═══════════════════════════════════════════════
+   SERVICES
+═══════════════════════════════════════════════ */
+#services {}
+.services-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--gold-border); }
+.svc-card { background: var(--navy); padding: 40px 34px; transition: background var(--transition); position:relative; overflow:hidden; }
+.svc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: var(--gold); transform: scaleX(0); transition: transform var(--transition); transform-origin: left; }
+.svc-card:hover { background: var(--navy-card); }
+.svc-card:hover::before { transform: scaleX(1); }
+.svc-icon { font-size:2rem; margin-bottom:20px; display:block; }
+.svc-title { font-family: var(--font-serif); color:var(--white); font-size:1.1rem; margin-bottom:14px; }
+.svc-desc { font-size:0.84rem; color:var(--slate); line-height:1.8; margin-bottom:20px; }
+.svc-list { list-style:none; }
+.svc-list li { font-size:0.78rem; color:var(--slate); padding:4px 0; display:flex; gap:8px; }
+.svc-list li::before { content:'→'; color:var(--gold); font-size:0.7rem; margin-top:2px; flex-shrink:0; }
+
+/* ═══════════════════════════════════════════════
+   TOOLS
+═══════════════════════════════════════════════ */
+#tools { background: var(--navy-mid); }
+.tools-grid { display:grid; grid-template-columns: repeat(6,1fr); gap:16px; margin-bottom:28px; }
+.t-card { background: var(--navy-card); border: 1px solid var(--gold-border); padding: 28px 16px 22px; text-align:center; transition: all var(--transition); cursor:default; }
+.t-card:hover { border-color: rgba(201,168,76,0.5); transform: translateY(-5px); background: rgba(201,168,76,0.04); box-shadow: 0 12px 36px rgba(0,0,0,0.3); }
+.t-icon { font-size:2rem; margin-bottom:12px; display:block; }
+.t-name { font-family: var(--font-mono); font-size:0.7rem; color:var(--slate); text-transform:uppercase; letter-spacing:0.08em; }
+.t-level { font-size:0.62rem; color:var(--gold); margin-top:5px; font-family: var(--font-mono); }
+.method-note { background: var(--navy-card); border: 1px solid var(--gold-border); border-left: 3px solid var(--gold); padding: 24px 32px; display:flex; gap:20px; align-items:flex-start; }
+.method-icon { font-size:1.4rem; flex-shrink:0; margin-top:2px; }
+.method-title { font-family: var(--font-serif); color:var(--white); font-size:1rem; margin-bottom:6px; }
+.method-desc { font-size:0.84rem; color:var(--slate); line-height:1.75; }
+.method-desc strong { color:var(--slate-light); font-weight:500; }
+
+/* ═══════════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════════ */
+#contact { text-align:center; }
+.contact-wrap { max-width:760px; margin:0 auto; }
+#contact .s-label { justify-content:center; }
+#contact .s-label::after { display:none; }
+.contact-headline { font-family: var(--font-serif); font-size: clamp(2.2rem, 5vw, 3.6rem); color:var(--white); font-weight:700; line-height:1.12; margin-bottom:22px; }
+.contact-headline em { color:var(--gold); font-style:normal; display:block; }
+.contact-sub { color:var(--slate); font-size:1rem; line-height:1.85; max-width:600px; margin:0 auto 52px; }
+.contact-cards { display:flex; justify-content:center; gap:18px; flex-wrap:wrap; margin-bottom:44px; }
+.c-card { background: var(--navy-card); border: 1px solid var(--gold-border); padding: 22px 28px; display:flex; align-items:center; gap:16px; text-decoration:none; color:inherit; transition: all var(--transition); min-width:210px; text-align:left; }
+.c-card:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 14px 44px rgba(0,0,0,0.35); }
+.c-icon { font-size:1.4rem; flex-shrink:0; }
+.c-label { font-family: var(--font-mono); font-size:0.62rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:3px; }
+.c-val { font-size:0.85rem; color:var(--slate-light); }
+.contact-cta { margin-bottom:48px; display:inline-block; }
+.availability { display:inline-flex; align-items:center; gap:10px; background: var(--navy-card); border: 1px solid var(--gold-border); padding: 12px 24px; margin-bottom:24px; }
+.avail-dot { width:8px; height:8px; border-radius:50%; background: var(--green); box-shadow: 0 0 10px rgba(100,255,218,0.6); animation: dotPulse 2s ease-in-out infinite; flex-shrink:0; }
+.avail-text { font-family: var(--font-mono); font-size:0.7rem; color:var(--green); letter-spacing:0.1em; text-transform:uppercase; }
+.contact-note { font-family: var(--font-mono); font-size:0.74rem; color:var(--slate); margin-top:10px; }
+.contact-note span { color:var(--gold); }
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer {
+  border-top: 1px solid var(--gold-border);
+  padding: 30px 64px;
+  display:flex; justify-content:space-between; align-items:center;
+  background: var(--navy);
+}
+.footer-left { font-family: var(--font-mono); font-size:0.74rem; color:var(--slate); }
+.footer-left strong { color:var(--gold); font-weight:400; }
+.footer-right { display:flex; gap:28px; }
+.footer-right a { font-size:0.74rem; color:var(--slate); text-decoration:none; letter-spacing:0.06em; text-transform:uppercase; font-family: var(--font-mono); transition: color var(--transition); }
+.footer-right a:hover { color:var(--gold); }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media (max-width:1180px) {
+  #navbar { padding:18px 36px; }
+  #navbar.scrolled { padding:12px 36px; }
+  .nav-links, .nav-right { display:none; }
+  .hamburger { display:flex; }  section { padding:80px 36px; }
+  #hero { padding:120px 36px 80px; }
+  .hero-badges { display:none; }
+  .hero-inner { display:block; }
+  .about-grid { grid-template-columns:1fr; gap:48px; }
+  .skills-wrapper { grid-template-columns:1fr 1fr; }
+  .certs-grid { grid-template-columns:1fr 1fr; }
+  .proj-card { grid-template-columns:1fr; }
+  .proj-left { border-right:none; border-bottom:1px solid var(--gold-border); flex-direction:row; align-items:center; gap:20px; flex-wrap:wrap; }
+  .proj-number { font-size:3rem; margin-bottom:0; }
+  .proj-cols { grid-template-columns:1fr; gap:18px; }
+  .proj-right { padding:30px 28px; }
+  .why-inner { grid-template-columns:1fr; gap:40px; }
+  .services-grid { grid-template-columns:1fr 1fr; }
+  .tools-grid { grid-template-columns:repeat(3,1fr); }
+  footer { flex-direction:column; gap:16px; text-align:center; padding:28px 36px; }
+  #why { padding:80px 36px; }
+}
+@media (max-width:680px) {
+  section { padding:60px 22px; }
+  #hero { padding:110px 22px 70px; }
+  #navbar { padding:16px 22px; }
+  #navbar.scrolled { padding:12px 22px; }
+  footer { padding:22px; }
+  .hero-stats { flex-wrap:wrap; gap:26px; }
+  .skills-wrapper { grid-template-columns:1fr; }
+  .certs-grid { grid-template-columns:1fr; }
+  .services-grid { grid-template-columns:1fr; }
+  .tools-grid { grid-template-columns:repeat(2,1fr); }
+  .metrics-grid { grid-template-columns:1fr 1fr; gap:20px; }
+  .why-right { grid-template-columns:1fr; }
+  .proj-results { flex-direction:column; }
+  .contact-cards { flex-direction:column; align-items:stretch; }
+  .c-card { min-width:unset; }
+  #why { padding:60px 22px; }
+  .method-note { flex-direction:column; gap:12px; }
+}
+
+/* ═══════════════════════════════════════════════
+   3D HEADING ANIMATION WRAPPER
+═══════════════════════════════════════════════ */
+.heading-3d-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.heading-3d-canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+}
+.heading-3d-wrap > h2,
+.heading-3d-wrap > .contact-headline {
+  position: relative;
+  z-index: 2;
+}
+/* Full-width heading wrap for block-level headings */
+.heading-3d-block {
+  position: relative;
+  overflow: visible;
+  margin-bottom: 0;
+}
+.heading-3d-block > canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.heading-3d-block > h2,
+.heading-3d-block > .contact-headline {
+  position: relative;
+  z-index: 2;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- ── TOWER CRANE ── -->
+        <!-- Mast -->
+        <rect x="38" y="18" width="2.5" height="28" fill="#c9a84c" opacity="0.9"/>
+        <!-- Mast cross bracing -->
+        <line x1="38" y1="22" x2="40.5" y2="26" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+        <line x1="40.5" y1="22" x2="38" y2="26" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+        <line x1="38" y1="28" x2="40.5" y2="32" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+        <line x1="40.5" y1="28" x2="38" y2="32" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+        <!-- Crane cab/top box -->
+        <rect x="37" y="15" width="4.5" height="3.5" fill="#c9a84c" opacity="0.7"/>
+        <!-- Main jib (long boom to left) -->
+        <line x1="39.5" y1="15" x2="22" y2="10" stroke="#c9a84c" stroke-width="1.8"/>
+        <!-- Counter jib (short to right) -->
+        <line x1="39.5" y1="15" x2="47" y2="12" stroke="#c9a84c" stroke-width="1.4"/>
+        <!-- Jib stays/cables from mast top -->
+        <line x1="39.5" y1="13" x2="22" y2="10" stroke="#c9a84c" stroke-width="0.6" opacity="0.55"/>
+        <line x1="39.5" y1="13" x2="47" y2="12" stroke="#c9a84c" stroke-width="0.6" opacity="0.55"/>
+        <!-- Hook wire from jib tip -->
+        <line x1="25" y1="10" x2="25" y2="20" stroke="#c9a84c" stroke-width="0.7" stroke-dasharray="1.5,1"/>
+        <!-- Hook shape -->
+        <path d="M23.5 20 Q25 22.5 26.5 20" stroke="#c9a84c" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <!-- Counter weight -->
+        <rect x="44" y="12" width="4" height="2.5" fill="#c9a84c" opacity="0.5" rx="0.5"/>
+
+        <!-- ── HIGH-RISE BUILDING ── -->
+        <!-- Main tower body -->
+        <rect x="6" y="14" width="22" height="34" fill="#0b1729" stroke="#c9a84c" stroke-width="1.2"/>
+        <!-- Podium/base -->
+        <rect x="4" y="44" width="26" height="4" fill="#0e1d38" stroke="#c9a84c" stroke-width="0.8"/>
+
+        <!-- Building setback / crown -->
+        <rect x="9" y="10" width="16" height="4" fill="#0b1729" stroke="#c9a84c" stroke-width="1"/>
+        <!-- Penthouse top -->
+        <rect x="12" y="7" width="10" height="3" fill="#0b1729" stroke="#c9a84c" stroke-width="0.8"/>
+        <!-- Antenna mast -->
+        <line x1="17" y1="2" x2="17" y2="7" stroke="#c9a84c" stroke-width="1"/>
+        <circle cx="17" cy="2" r="1.2" fill="#c9a84c"/>
+        <!-- Antenna blink dot glow -->
+        <circle cx="17" cy="2" r="2" fill="#c9a84c" opacity="0.15"/>
+
+        <!-- Horizontal floor slabs (every 4px) -->
+        <line x1="6" y1="18" x2="28" y2="18" stroke="#c9a84c" stroke-width="0.4" opacity="0.35"/>
+        <line x1="6" y1="22" x2="28" y2="22" stroke="#c9a84c" stroke-width="0.4" opacity="0.35"/>
+        <line x1="6" y1="26" x2="28" y2="26" stroke="#c9a84c" stroke-width="0.4" opacity="0.35"/>
+        <line x1="6" y1="30" x2="28" y2="30" stroke="#c9a84c" stroke-width="0.4" opacity="0.35"/>
+        <line x1="6" y1="34" x2="28" y2="34" stroke="#c9a84c" stroke-width="0.4" opacity="0.35"/>
+        <line x1="6" y1="38" x2="28" y2="38" stroke="#c9a84c" stroke-width="0.4" opacity="0.35"/>
+        <line x1="6" y1="42" x2="28" y2="42" stroke="#c9a84c" stroke-width="0.4" opacity="0.35"/>
+
+        <!-- Vertical column dividers -->
+        <line x1="13" y1="14" x2="13" y2="44" stroke="#c9a84c" stroke-width="0.4" opacity="0.25"/>
+        <line x1="20" y1="14" x2="20" y2="44" stroke="#c9a84c" stroke-width="0.4" opacity="0.25"/>
+
+        <!-- Windows — col 1 (lit=0.7, dark=0.2) -->
+        <rect x="7.5" y="15" width="4" height="2.5" fill="#c9a84c" opacity="0.55" rx="0.3"/>
+        <rect x="7.5" y="19" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+        <rect x="7.5" y="23" width="4" height="2.5" fill="#c9a84c" opacity="0.65" rx="0.3"/>
+        <rect x="7.5" y="27" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+        <rect x="7.5" y="31" width="4" height="2.5" fill="#c9a84c" opacity="0.5"  rx="0.3"/>
+        <rect x="7.5" y="35" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+        <rect x="7.5" y="39" width="4" height="2.5" fill="#c9a84c" opacity="0.6"  rx="0.3"/>
+
+        <!-- Windows — col 2 -->
+        <rect x="14.5" y="15" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+        <rect x="14.5" y="19" width="4" height="2.5" fill="#c9a84c" opacity="0.7"  rx="0.3"/>
+        <rect x="14.5" y="23" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+        <rect x="14.5" y="27" width="4" height="2.5" fill="#c9a84c" opacity="0.6"  rx="0.3"/>
+        <rect x="14.5" y="31" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+        <rect x="14.5" y="35" width="4" height="2.5" fill="#c9a84c" opacity="0.55" rx="0.3"/>
+        <rect x="14.5" y="39" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+
+        <!-- Windows — col 3 -->
+        <rect x="21.5" y="15" width="4" height="2.5" fill="#c9a84c" opacity="0.6"  rx="0.3"/>
+        <rect x="21.5" y="19" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+        <rect x="21.5" y="23" width="4" height="2.5" fill="#c9a84c" opacity="0.45" rx="0.3"/>
+        <rect x="21.5" y="27" width="4" height="2.5" fill="#c9a84c" opacity="0.7"  rx="0.3"/>
+        <rect x="21.5" y="31" width="4" height="2.5" fill="#c9a84c" opacity="0.2"  rx="0.3"/>
+        <rect x="21.5" y="35" width="4" height="2.5" fill="#c9a84c" opacity="0.6"  rx="0.3"/>
+        <rect x="21.5" y="39" width="4" height="2.5" fill="#c9a84c" opacity="0.35" rx="0.3"/>
+
+        <!-- Ground shadow line -->
+        <line x1="2" y1="50" x2="50" y2="50" stroke="#c9a84c" stroke-width="0.8" opacity="0.2"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Avineesh <span>Parjapati</span></span>
+      <span class="nav-logo-tag">QS &amp; Cost Consultant</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://drive.google.com/uc?export=download&id=1nToAvMm9RFkvDH3XZsgqvvaeffAEPG7t" target="_blank" rel="noopener" class="nav-cv-btn">↓ Download CV</a>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobileMenu">
+  <a href="#about"    onclick="closeMenu()">About</a>
+  <a href="#skills"   onclick="closeMenu()">Skills</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#tools"    onclick="closeMenu()">Tools</a>
+  <a href="#contact"  onclick="closeMenu()" class="mobile-hire">Contact Me</a>
+  <a href="https://drive.google.com/uc?export=download&id=1nToAvMm9RFkvDH3XZsgqvvaeffAEPG7t" target="_blank" rel="noopener" class="mobile-cv">↓ Download CV</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <canvas id="heroBg"></canvas>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Civil Engineer · Quantity Surveyor · Cost Consultant</div>
+      <h1 class="hero-name">
+        Avineesh
+        <em>Parjapati</em>
+      </h1>
+      <p class="hero-title">BIM-Based Quantity Takeoff &amp; Cost Optimization</p>
+      <p class="hero-desc">
+        I convert construction complexity into <strong>defensible cost intelligence</strong> through CAD &amp; Revit-based Quantity Takeoff, precision BOQ, and cost optimization for large-scale construction projects. Currently at <strong>Grant Thornton Bharat LLP</strong>, I deliver Revit-driven QTO, lender-grade technical audits, and data-backed project analysis for <mark>high-rise and large-scale developments across India</mark>, while continuously expanding my expertise in advanced estimation and documentation tools such as <strong>Bluebeam</strong> and <strong>PlanSwift</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Case Studies ↓</a>
+        <a href="#contact"  class="btn-outline">Let's Talk</a>
+        <a href="https://drive.google.com/uc?export=download&id=1nToAvMm9RFkvDH3XZsgqvvaeffAEPG7t" target="_blank" rel="noopener" class="btn-cv">↓ Download CV</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n">3+</span>
+          <span class="stat-l">Yrs Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">4M+</span>
+          <span class="stat-l">Sq Ft Quantified</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">±2%</span>
+          <span class="stat-l">Cost Accuracy</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">9+</span>
+          <span class="stat-l">High-Rise Towers<br><span style="font-size:0.62rem; letter-spacing:0.04em; opacity:0.75;">+ Schools · Malls · Stadiums</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-badges">
+      <div class="h-badge">
+        <span class="h-badge-val">Grant Thornton</span>
+        <span class="h-badge-label">Current · Cost Consultant · May 2024</span>
+      </div>
+      <div class="h-badge">
+        <span class="h-badge-val">Godrej · M3M</span>
+        <span class="h-badge-label">Direct Client Exposure</span>
+      </div>
+      <div class="h-badge">
+        <span class="h-badge-val">25% Faster</span>
+        <span class="h-badge-label">QTO via Revit BIM Workflow</span>
+      </div>
+      <div class="h-badge">
+        <span class="h-badge-val">95% Closure</span>
+        <span class="h-badge-label">Audit Observation Rate</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <canvas class="section-canvas" id="aboutBg"></canvas>
+  <div class="s-label" id="aboutHeading">01 · Who I Am</div>
+  <div class="about-grid">
+
+    <div class="about-body reveal">
+      <h2 class="s-title" id="aboutMainHeading">From CAD Lines<br>to Cost Intelligence</h2>
+      <div class="gold-rule"></div>
+      <p>
+        My path into cost consulting began on the drawing board — learning how buildings are designed before understanding how they're priced. That dual literacy, <strong>reading structure and reading budgets</strong>, became my core professional asset. I hold a <strong>B.Tech in Civil Engineering (81%, First Division)</strong> from Goel Institute of Technology &amp; Management, Lucknow — Dr. APJ Abdul Kalam Technical University.
+      </p>
+      <p>
+        At <strong>Grant Thornton Bharat LLP</strong>, I serve as an independent Cost Consultant embedded on behalf of lender institutions. My mandate: verify project costs, flag deviations, and ensure capital disbursed matches construction delivered. For clients like <span class="highlight">Godrej Properties and M3M India</span>, <strong>approximations are not acceptable</strong> — the numbers must be defensible.
+      </p>
+      <p>
+        My differentiator is methodology. I integrate <strong>Revit BIM directly into the QS workflow</strong> — extracting quantities from model geometry rather than scaling 2D drawings manually. Across 1M+ sq ft of high-rise built-up area, that approach has consistently delivered <strong>±2% cost accuracy</strong> and 25% faster turnaround compared to traditional takeoff methods.
+      </p>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-period">May 2024 – Present</div>
+            <div class="tl-role">Consultant — Cost Consultant (QS)</div>
+            <div class="tl-org">Grant Thornton Bharat LLP</div>
+            <div class="tl-detail">Client: Godrej Properties Ltd. | 9 Residential Towers + Commercial &amp; Institutional</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-period">2024 (Concurrent)</div>
+            <div class="tl-role">Technical &amp; Quality Audit Consultant</div>
+            <div class="tl-org">Grant Thornton Bharat LLP</div>
+            <div class="tl-detail">Client: M3M India — M3M Jewel, M3M Route 65 (Malls), M3M Antalya Hills (Villas, 25 Acres)</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-period">Oct 2023 – Apr 2024</div>
+            <div class="tl-role">CAD Engineer</div>
+            <div class="tl-org">Consulting Engineer Group Ltd.</div>
+            <div class="tl-detail">Client: Ajmer Smart City Ltd. — Hospital, Admin Building, Stadium &amp; civic infrastructure</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-period">2023 | 81% First Division</div>
+            <div class="tl-role">B.Tech — Civil Engineering</div>
+            <div class="tl-org">Goel Institute of Technology &amp; Management, Lucknow · AKTU</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-period">2020 | 77% First Division</div>
+            <div class="tl-role">Diploma — Civil Engineering</div>
+            <div class="tl-org">Goel Institute of Technology &amp; Management, Lucknow</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-panel reveal reveal-delay-2">
+      <div class="metrics-box">
+        <div class="metrics-box-title">// By the Numbers</div>
+        <div class="metrics-grid">
+          <div class="m-item">
+            <span class="m-val">9+</span>
+            <div class="m-label">High-Rise Towers<br>35–36 floors each</div>
+          </div>
+          <div class="m-item">
+            <span class="m-val">100+</span>
+            <div class="m-label">Structural &amp; architectural<br>drawings reviewed</div>
+          </div>
+          <div class="m-item">
+            <span class="m-val">50+</span>
+            <div class="m-label">Audit observations<br>raised &amp; tracked</div>
+          </div>
+          <div class="m-item">
+            <span class="m-val">95%</span>
+            <div class="m-label">Compliance closure<br>rate achieved</div>
+          </div>
+          <div class="m-item">
+            <span class="m-val">±2%</span>
+            <div class="m-label">BOQ cost accuracy<br>vs project benchmarks</div>
+          </div>
+          <div class="m-item">
+            <span class="m-val">25%</span>
+            <div class="m-label">QTO efficiency gain<br>via Revit 5D workflow</div>
+          </div>
+          <div class="m-item">
+            <span class="m-val">12+</span>
+            <div class="m-label">Buildings with full BOQ<br>9 Towers + School · Mall · Club</div>
+          </div>
+          <div class="m-item">
+            <span class="m-val">2x</span>
+            <div class="m-label">BOQ per building<br>Core &amp; Shell · Interior &amp; Finishes</div>
+          </div>
+        </div>
+      </div>
+      <div class="clients-box">
+        <div class="clients-title">// Client &amp; Project Exposure</div>
+        <div class="client-chips">
+          <div class="chip">Godrej Properties</div>
+          <div class="chip">M3M India</div>
+          <div class="chip">Sports Authority of India</div>
+          <div class="chip">Ajmer Smart City</div>
+          <div class="chip">Grant Thornton</div>
+          <div class="chip">CEG Ltd.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills">
+  <canvas class="section-canvas" id="skillsBg"></canvas>
+  <div class="s-label">02 · Capabilities</div>
+  <h2 class="s-title" id="skillsHeading">What I Bring to Every Brief</h2>
+  <p class="s-sub">A practitioner's skill set — shaped by live project pressure, not just certification.</p>
+
+  <div class="skills-wrapper">
+    <div class="sk-card reveal">
+      <span class="sk-icon">📐</span>
+      <div class="sk-name">Quantity Surveying</div>
+      <div class="tag-cloud">
+        <span class="tag">Pre-Contract QS</span>
+        <span class="tag">Post-Contract QS</span>
+        <span class="tag">BOQ Preparation</span>
+        <span class="tag">Quantity Takeoff</span>
+        <span class="tag">Rate Analysis</span>
+        <span class="tag">Bar Bending Schedule</span>
+        <span class="tag">Billing &amp; Measurement</span>
+      </div>
+    </div>
+
+    <div class="sk-card reveal reveal-delay-1">
+      <span class="sk-icon">💰</span>
+      <div class="sk-name">Cost Management</div>
+      <div class="tag-cloud">
+        <span class="tag">Cost Estimation</span>
+        <span class="tag">Cost Control</span>
+        <span class="tag">Budget Variance</span>
+        <span class="tag">Variation Orders</span>
+        <span class="tag">IPC Verification</span>
+        <span class="tag">Lender Reporting</span>
+        <span class="tag">Cost Reports</span>
+      </div>
+    </div>
+
+    <div class="sk-card reveal reveal-delay-2">
+      <span class="sk-icon">📝</span>
+      <div class="sk-name">Contract &amp; Tendering</div>
+      <div class="tag-cloud">
+        <span class="tag">Tender Management</span>
+        <span class="tag">RFP Preparation</span>
+        <span class="tag">Bid Evaluation</span>
+        <span class="tag">Contract Review</span>
+        <span class="tag">Scope Documentation</span>
+        <span class="tag">Govt &amp; Private Tenders</span>
+      </div>
+    </div>
+
+    <div class="sk-card reveal">
+      <span class="sk-icon">🔷</span>
+      <div class="sk-name">BIM &amp; CAD</div>
+      <div class="tag-cloud">
+        <span class="tag">Revit Architecture</span>
+        <span class="tag">BIM</span>
+        <span class="tag">AutoCAD</span>
+        <span class="tag">3D Modeling</span>
+        <span class="tag">Drawing Review</span>
+        <span class="tag">ETABS</span>
+        <span class="tag">STAAD.Pro</span>
+        <span class="tag tag-highlight">CAD Plugin &amp; LISP Dev</span>
+        <span class="tag tag-highlight">AI-Deployed Automation</span>
+      </div>
+    </div>
+
+    <div class="sk-card reveal reveal-delay-1">
+      <span class="sk-icon">🔍</span>
+      <div class="sk-name">Technical &amp; Quality Audit</div>
+      <div class="tag-cloud">
+        <span class="tag">Site Inspection</span>
+        <span class="tag">Observation Tracking</span>
+        <span class="tag">IS / NBC Standards</span>
+        <span class="tag">Spec Compliance</span>
+        <span class="tag">Progress Monitoring</span>
+        <span class="tag">Corrective Action Plans</span>
+        <span class="tag">Rework Risk Reduction</span>
+      </div>
+    </div>
+
+    <div class="sk-card reveal reveal-delay-2">
+      <span class="sk-icon">📊</span>
+      <div class="sk-name">Software Proficiency</div>
+      <ul class="bar-list">
+        <li class="bar-item">
+          <div class="bar-header">Advanced Excel &amp; Reporting <em>95%</em></div>
+          <div class="bar-track"><div class="bar-fill" data-width="95"></div></div>
+        </li>
+        <li class="bar-item">
+          <div class="bar-header">AutoCAD <em>100%</em></div>
+          <div class="bar-track"><div class="bar-fill" data-width="100"></div></div>
+        </li>
+        <li class="bar-item">
+          <div class="bar-header">Revit / BIM <em>80%</em></div>
+          <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+        </li>
+        <li class="bar-item">
+          <div class="bar-header">ETABS / STAAD.Pro <em>50%</em></div>
+          <div class="bar-track"><div class="bar-fill" data-width="50"></div></div>
+        </li>
+        <li class="bar-item">
+          <div class="bar-header">MS Project / Scheduling <em>50%</em></div>
+          <div class="bar-track"><div class="bar-fill" data-width="50"></div></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section id="certs">
+  <div class="s-label">02b · Certifications</div>
+  <h2 class="s-title" id="certsHeading">Formal Training &amp; Certifications</h2>
+  <p class="s-sub">Credentials that back up on-site practice — from structural analysis to international project management.</p>
+
+  <div class="certs-grid">
+    <div class="cert-card reveal">
+      <div class="cert-icon">🏛️</div>
+      <div class="cert-body">
+        <div class="cert-name">Construction Project Management</div>
+        <div class="cert-issuer">Columbia University, New York (Online)</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-icon">📐</div>
+      <div class="cert-body">
+        <div class="cert-name">AutoCAD, Revit &amp; STAAD Pro</div>
+        <div class="cert-issuer">CAD DESK</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-icon">🏗️</div>
+      <div class="cert-body">
+        <div class="cert-name">ETABS Structural Analysis</div>
+        <div class="cert-issuer">Bala Ji Infotech</div>
+      </div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-icon">📋</div>
+      <div class="cert-body">
+        <div class="cert-name">Quantity Surveying &amp; Rate Analysis; Building Project Supervision</div>
+        <div class="cert-issuer">Civil Guruji Civil Engineer Training Institute</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-icon">🔩</div>
+      <div class="cert-body">
+        <div class="cert-name">Bar Bending Schedule (BBS)</div>
+        <div class="cert-issuer">PTS CAD Expert</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-icon">📑</div>
+      <div class="cert-body">
+        <div class="cert-name">Tender Management — Advanced (Govt. &amp; Private Projects)</div>
+        <div class="cert-issuer">PTS CAD Expert</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects">
+  <canvas class="section-canvas" id="projectsBg"></canvas>
+  <div class="s-label">03 · Case Studies</div>
+  <h2 class="s-title" id="projectsHeading">Projects That Define the Work</h2>
+  <p class="s-sub">Not a list of responsibilities — a record of scope, decisions, and quantified outcomes.</p>
+
+  <div class="reveal" style="margin-bottom: 48px;">
+    <a href="https://drive.google.com/drive/folders/1PZ7igwFcK3jo_sWCxZhzZwR58nAEGooF?usp=sharing" target="_blank" rel="noopener" style="
+      display: inline-flex; align-items: center; gap: 12px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 16px 32px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all var(--transition);
+    " onmouseover="this.style.background='rgba(201,168,76,0.22)'; this.style.boxShadow='0 6px 28px rgba(201,168,76,0.25)'; this.style.transform='translateY(-2px)'"
+       onmouseout="this.style.background='var(--gold-dim)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+      <span style="font-size:1.1rem;">📁</span>
+      View My Project Work
+      <span>↗</span>
+    </a>
+    <p style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--slate); margin-top: 10px; letter-spacing: 0.08em;">
+      BOQs · Cost Reports · Quantity Takeoff Samples · Audit Documents
+    </p>
+  </div>
+
+    <!-- PROJECT 1: Godrej / Grant Thornton -->
+    <div class="proj-card reveal">
+      <div class="proj-left">
+        <div>
+          <div class="proj-type">Residential · High-Rise · Commercial</div>
+          <div class="proj-number">01</div>
+        </div>
+        <div class="proj-tools">
+          <span class="proj-tool">Revit 5D</span>
+          <span class="proj-tool">AutoCAD</span>
+          <span class="proj-tool">Excel</span>
+          <span class="proj-tool">BOQ</span>
+        </div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-client">Godrej Properties Ltd.</div>
+        <div class="proj-employer">Employer: Grant Thornton Bharat LLP · May 2024 – Present</div>
+        <h3 class="proj-title">End-to-End QS for 9-Tower High-Rise Cluster + School &amp; Commercial Complex</h3>
+        <div class="proj-cols">
+          <div class="proj-col">
+            <div class="proj-col-label">Scope</div>
+            <p>9 residential towers (35–36 floors), <strong>4M+ sq ft</strong> — structural, architectural, finishing and external development works. Also covers a school with EWS block, commercial retail building, and club house.</p>
+          </div>
+          <div class="proj-col">
+            <div class="proj-col-label">Approach</div>
+            <p>Executed CAD &amp; Revit-based quantity takeoff workflows for high-rise and large-scale projects, with detailed cross-verification against extensive structural and architectural drawing sets across multiple disciplines. Maintained accurate BOQs, cost reports, variation analysis, and progress-linked documentation while ensuring traceable and revision-ready deliverables throughout the project lifecycle.</p>
+          </div>
+          <div class="proj-col">
+            <div class="proj-col-label">Deliverables</div>
+            <p>Detailed BOQs, rate analysis, material take-offs, variation sheets, and cost reports for <strong>all trade packages</strong> — civil, structural, finishing, and external works. Supported lender disbursement decisions.</p>
+          </div>
+        </div>
+        <div class="proj-results">
+          <div class="r-pill"><div class="r-pill-n">4M+</div><div class="r-pill-l">Sq Ft<br>quantified</div></div>
+          <div class="r-pill"><div class="r-pill-n">±2%</div><div class="r-pill-l">Cost accuracy vs<br>project benchmarks</div></div>
+          <div class="r-pill"><div class="r-pill-n">25%</div><div class="r-pill-l">Efficiency gain<br>via BIM workflow</div></div>
+          <div class="r-pill"><div class="r-pill-n">100+</div><div class="r-pill-l">Drawings<br>reviewed</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: M3M Technical Audit -->
+    <div class="proj-card reveal">
+      <div class="proj-left">
+        <div>
+          <div class="proj-type">Technical &amp; Quality Audit</div>
+          <div class="proj-number">02</div>
+        </div>
+        <div class="proj-tools">
+          <span class="proj-tool">Excel</span>
+          <span class="proj-tool">AutoCAD</span>
+          <span class="proj-tool">IS / NBC</span>
+          <span class="proj-tool">Site Inspection</span>
+        </div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-client">M3M India Pvt. Ltd.</div>
+        <div class="proj-employer">Employer: Grant Thornton Bharat LLP · 2024 (Concurrent)</div>
+        <h3 class="proj-title">Independent Technical Audit Across Mixed-Use Development Portfolio</h3>
+        <div class="sub-projects">
+          <div class="sub-proj">
+            <div class="sub-proj-header">
+              <span class="sub-proj-tag">01 · Residential</span>
+              <span class="sub-proj-name">M3M Antalya Hills — G+3 Residential Villas, 25 Acres</span>
+            </div>
+            <div class="sub-proj-body">
+              Audited construction quality of individual G+3 villas across a 25-acre site. Verified <strong>structural and architectural works</strong> against approved drawings and IS/NBC standards. Documented non-conformances with photographic evidence and corrective action plans.
+            </div>
+          </div>
+          <div class="sub-proj">
+            <div class="sub-proj-header">
+              <span class="sub-proj-tag">02 · Commercial</span>
+              <span class="sub-proj-name">M3M Jewel — Commercial Shopping Mall</span>
+            </div>
+            <div class="sub-proj-body">
+              Joint technical audit covering RCC works, finishing trades, MEP coordination, and <strong>contractual compliance</strong>. Raised structured observations with quantified impact assessments.
+            </div>
+          </div>
+          <div class="sub-proj">
+            <div class="sub-proj-header">
+              <span class="sub-proj-tag">03 · Commercial</span>
+              <span class="sub-proj-name">M3M Route 65 — Commercial Shopping Mall</span>
+            </div>
+            <div class="sub-proj-body">
+              Reviewed construction progress, specification adherence, and cost claims. Collaborated with project teams to resolve technical discrepancies and <strong>reduce rework costs</strong>. Prepared structured reports for senior management and client review.
+            </div>
+          </div>
+        </div>
+        <div class="proj-results">
+          <div class="r-pill"><div class="r-pill-n">3</div><div class="r-pill-l">Projects<br>audited</div></div>
+          <div class="r-pill"><div class="r-pill-n">25 Ac</div><div class="r-pill-l">Mixed-use<br>development</div></div>
+          <div class="r-pill"><div class="r-pill-n">50+</div><div class="r-pill-l">Audit<br>observations</div></div>
+          <div class="r-pill"><div class="r-pill-n">95%</div><div class="r-pill-l">Compliance<br>closure rate</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: SAI -->
+    <div class="proj-card reveal">
+      <div class="proj-left">
+        <div>
+          <div class="proj-type">Government · Sports Infrastructure</div>
+          <div class="proj-number">03</div>
+        </div>
+        <div class="proj-tools">
+          <span class="proj-tool">Excel</span>
+          <span class="proj-tool">AutoCAD</span>
+          <span class="proj-tool">Rate Analysis</span>
+          <span class="proj-tool">RFP</span>
+        </div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-client">Sports Authority of India (SAI)</div>
+        <div class="proj-employer">Employer: Grant Thornton Bharat LLP</div>
+        <h3 class="proj-title">BOQ Preparation &amp; RFP Development for SAI Sports Infrastructure</h3>
+        <div class="proj-cols">
+          <div class="proj-col">
+            <div class="proj-col-label">Challenge</div>
+            <p>Prepare a <strong>contractor-ready BOQ and RFP package</strong> for SAI infrastructure facilities — in a government procurement environment where ambiguous scope directly leads to inflated bids and post-award disputes.</p>
+          </div>
+          <div class="proj-col">
+            <div class="proj-col-label">Approach</div>
+            <p>Detailed quantity takeoff covering civil, structural, and ancillary works. BOQ items developed with <strong>unambiguous descriptions and defined measurement methodology</strong>. Coordinated with senior consultants to align BOQ with technical specifications.</p>
+          </div>
+          <div class="proj-col">
+            <div class="proj-col-label">Outcome</div>
+            <p>Complete RFP documentation enabling transparent tendering. Structured BOQ established a <strong>cost control baseline</strong> for execution, preventing variation loading from the outset and supporting audit-ready procurement.</p>
+          </div>
+        </div>
+        <div class="proj-results">
+          <div class="r-pill"><div class="r-pill-n">Full</div><div class="r-pill-l">BOQ &amp; RFP<br>package delivered</div></div>
+          <div class="r-pill"><div class="r-pill-n">Govt</div><div class="r-pill-l">Procurement<br>standards met</div></div>
+          <div class="r-pill"><div class="r-pill-n">Zero</div><div class="r-pill-l">Scope gap<br>post-award</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 4: Ajmer Smart City -->
+    <div class="proj-card reveal">
+      <div class="proj-left">
+        <div>
+          <div class="proj-type">Government · Smart City · BIM</div>
+          <div class="proj-number">04</div>
+        </div>
+        <div class="proj-tools">
+          <span class="proj-tool">Revit</span>
+          <span class="proj-tool">AutoCAD</span>
+          <span class="proj-tool">BIM Modeling</span>
+          <span class="proj-tool">Coordination</span>
+        </div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-client">Ajmer Smart City Ltd.</div>
+        <div class="proj-employer">Employer: Consulting Engineer Group Ltd. · Oct 2023 – Apr 2024</div>
+        <h3 class="proj-title">BIM Modeling &amp; Multi-Building Drawing Management — Hospital, Stadium &amp; Civic Infrastructure</h3>
+        <div class="proj-cols">
+          <div class="proj-col">
+            <div class="proj-col-label">Scope</div>
+            <p>Multiple public buildings under Smart City Mission: <strong>Hospital, Administrative Building, Stadium</strong>, and other civic infrastructure. Prepared and reviewed 50+ architectural and structural drawings under senior expert guidance.</p>
+          </div>
+          <div class="proj-col">
+            <div class="proj-col-label">Approach</div>
+            <p>Developed <strong>3D BIM models using Revit Architecture</strong> for all major buildings. Improved design coordination and clash detection. Participated in active site visits to verify drawing compliance and monitor construction progress.</p>
+          </div>
+          <div class="proj-col">
+            <div class="proj-col-label">Value Added</div>
+            <p>BIM-derived quantities fed directly into project cost estimates. Reduced ambiguity in public procurement — where <strong>over-claiming and under-specification</strong> are primary audit risks — through model-traceable quantities.</p>
+          </div>
+        </div>
+        <div class="proj-results">
+          <div class="r-pill"><div class="r-pill-n">50+</div><div class="r-pill-l">Drawings<br>produced &amp; reviewed</div></div>
+          <div class="r-pill"><div class="r-pill-n">4+</div><div class="r-pill-l">Building types<br>modelled in BIM</div></div>
+          <div class="r-pill"><div class="r-pill-n">Smart</div><div class="r-pill-l">City compliance<br>standards met</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ WHY HIRE ME ═══ -->
+<section id="why">
+  <canvas class="section-canvas" id="whyBg"></canvas>
+  <div class="why-inner">
+    <div class="why-left reveal">
+      <div class="s-label">What Sets Me Apart</div>
+      <h2 class="s-title" id="whyHeading">What Separates a Good QS from a Great One</h2>
+      <div class="gold-rule"></div>
+      <p style="color:var(--slate); font-size:0.93rem; line-height:1.85;">
+        Most QS professionals can count. The value I bring is knowing <em>what</em> to count, <em>why</em> the numbers behave the way they do — and <em>how</em> to communicate cost risk clearly to developers, lenders, and PMCs.
+      </p>
+    </div>
+    <div class="why-right reveal reveal-delay-1">
+      <div class="why-card">
+        <div class="why-card-icon">🔗</div>
+        <div class="why-card-title">BIM-Native Workflow</div>
+        <p>Quantities extracted through a combination of CAD-based measurement workflows and Revit model geometry — ensuring every number is accurate, traceable, auditable, and revision-ready as designs evolve.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">🏦</div>
+        <div class="why-card-title">Lender-Grade Accuracy</div>
+        <p>My work at Grant Thornton is reviewed by financial institutions. The ±2% accuracy standard I maintain exists because errors have real capital consequences at scale.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">🎯</div>
+        <div class="why-card-title">Scale Without Compromise</div>
+        <p>Managed quantity takeoff, BOQ, and cost consulting workflows for high-rise and large-scale developments exceeding 4M+ sq ft, involving multiple towers, extensive drawing sets, and complex design coordination — without compromising accuracy or detail. Built structured estimation systems including standardized templates, rate libraries, and disciplined review processes to improve scalability, consistency, and audit readiness.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">📋</div>
+        <div class="why-card-title">Audit-Ready Deliverables</div>
+        <p>Every BOQ, report, and estimate I produce is structured for scrutiny. If a third party reviews it six months later, the methodology and assumptions are fully documented.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+  <canvas class="section-canvas" id="servicesBg"></canvas>
+  <div class="s-label">04 · Services</div>
+  <h2 class="s-title" id="servicesHeading">How I Can Work With You</h2>
+  <p class="s-sub">Whether you need independent cost validation or full pre-contract QS support — here's what I deliver.</p>
+
+  <div class="services-grid">
+    <div class="svc-card reveal">
+      <span class="svc-icon">📏</span>
+      <div class="svc-title">BIM-Based Quantity Takeoff</div>
+      <p class="svc-desc">Hybrid CAD &amp; Revit-based quantity extraction workflow focused on accuracy, traceability, and scalable cost intelligence for high-rise and large-scale construction projects. Quantities are extracted directly from Revit models where applicable, while CAD-based measurement workflows and plugins are used for detailed drawing-based takeoff requirements.</p>
+      <ul class="svc-list">
+        <li>Revit-driven and CAD-assisted quantity extraction workflows</li>
+        <li>Detailed BOQ preparation with discipline-wise quantity segregation</li>
+        <li>Civil, structural, architectural, and finishing quantity analysis</li>
+        <li>Cross-verification between model data and issued drawing sets</li>
+        <li>Revision-ready workflows for evolving design changes and updates</li>
+        <li>Structured templates and review systems for audit-ready deliverables</li>
+      </ul>
+    </div>
+    <div class="svc-card reveal reveal-delay-1">
+      <span class="svc-icon">📋</span>
+      <div class="svc-title">BOQ Preparation</div>
+      <p class="svc-desc">Contractor-ready Bills of Quantities with unambiguous descriptions, IS/CPWD measurement methodology, and documented rate basis.</p>
+      <ul class="svc-list">
+        <li>IS / CPWD compliant structuring</li>
+        <li>Preambles and specification alignment</li>
+        <li>Excel-based, formula-driven, auditable</li>
+        <li>Rate analysis for non-standard items</li>
+      </ul>
+    </div>
+    <div class="svc-card reveal reveal-delay-2">
+      <span class="svc-icon">💹</span>
+      <div class="svc-title">Cost Estimation &amp; Budgeting</div>
+      <p class="svc-desc">Design-stage cost plans that give developers a realistic financial frame before committing to full documentation expenditure.</p>
+      <ul class="svc-list">
+        <li>Parametric estimates (concept stage)</li>
+        <li>Detailed cost plans aligned to design stage</li>
+        <li>Escalation and contingency modelling</li>
+        <li>Cost benchmarking by project typology</li>
+      </ul>
+    </div>
+    <div class="svc-card reveal">
+      <span class="svc-icon">🔍</span>
+      <div class="svc-title">Technical Audit</div>
+      <p class="svc-desc">Independent, lender-grade audits that verify project progress, cost claims, and IS/NBC specification compliance for investors and financiers.</p>
+      <ul class="svc-list">
+        <li>IPC verification against approved BOQ</li>
+        <li>Site progress vs. drawing reconciliation</li>
+        <li>Structured observation reports with photographic evidence</li>
+        <li>Corrective action tracking to closure</li>
+      </ul>
+    </div>
+    <div class="svc-card reveal reveal-delay-1">
+      <span class="svc-icon">📝</span>
+      <div class="svc-title">Tender &amp; Contract Management</div>
+      <p class="svc-desc">End-to-end tendering support — from RFP documentation and bid evaluation to contract award recommendation for both government and private projects.</p>
+      <ul class="svc-list">
+        <li>RFP and tender documentation</li>
+        <li>Pre-qualification criteria development</li>
+        <li>Comparative bid analysis and loading check</li>
+        <li>Govt. &amp; private sector procurement</li>
+      </ul>
+    </div>
+    <div class="svc-card reveal reveal-delay-2">
+      <span class="svc-icon">📊</span>
+      <div class="svc-title">Ongoing Cost Consulting</div>
+      <p class="svc-desc">Retained advisory through project execution — monitoring variations, certifying interim payments, and protecting your contingency budget at every milestone.</p>
+      <ul class="svc-list">
+        <li>Monthly cost reports and progress updates</li>
+        <li>Variation order valuation and review</li>
+        <li>Cost-at-completion forecasting</li>
+        <li>Final account preparation and settlement</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TOOLS ═══ -->
+<section id="tools">
+  <canvas class="section-canvas" id="toolsBg"></canvas>
+  <div class="s-label">05 · Technology Stack</div>
+  <h2 class="s-title" id="toolsHeading">Tools &amp; Software</h2>
+  <p class="s-sub">Purpose-selected for accuracy, auditability, and professional deliverable quality.</p>
+
+  <div class="tools-grid">
+    <div class="t-card reveal">
+      <span class="t-icon">🔷</span>
+      <div class="t-name">Revit</div>
+      <div class="t-level">BIM · Structural Modelling · Architectural Modelling · Scheduling</div>
+    </div>
+    <div class="t-card reveal reveal-delay-1">
+      <span class="t-icon">📐</span>
+      <div class="t-name">AutoCAD</div>
+      <div class="t-level">Drawing · Review</div>
+    </div>
+    <div class="t-card reveal reveal-delay-2">
+      <span class="t-icon">📊</span>
+      <div class="t-name">MS Excel</div>
+      <div class="t-level">Advanced · Macros</div>
+    </div>
+    <div class="t-card reveal reveal-delay-1">
+      <span class="t-icon">🏗️</span>
+      <div class="t-name">ETABS</div>
+      <div class="t-level">Structural Review</div>
+    </div>
+    <div class="t-card reveal reveal-delay-2">
+      <span class="t-icon">⚙️</span>
+      <div class="t-name">STAAD.Pro</div>
+      <div class="t-level">Structural Analysis</div>
+    </div>
+    <div class="t-card reveal reveal-delay-3">
+      <span class="t-icon">📁</span>
+      <div class="t-name">MS Project</div>
+      <div class="t-level">Scheduling · Planning</div>
+    </div>
+  </div>
+
+  <div class="method-note reveal" style="margin-top:28px;">
+    <div class="method-icon">💡</div>
+    <div>
+      <div class="method-title">Why BIM Improves Quantity Surveying Efficiency</div>
+      <p class="method-desc">
+        Traditional quantity takeoff often depends entirely on manual scaling from 2D CAD or PDF drawings, which can become time-consuming, difficult to update, and prone to discrepancies when designs evolve. In my workflow, I combine CAD-based measurement methods with Revit-driven quantity extraction to improve accuracy, traceability, and efficiency on large-scale projects.
+        Where <strong>Revit</strong> models are available, quantities are extracted directly from model geometry and linked element data, allowing faster updates and better coordination during design revisions. For drawing-based projects, I use structured CAD workflows and plugins to maintain consistency and detailed verification across disciplines. This <strong>hybrid approach</strong> helps deliver audit-ready BOQs, accurate cost reports, and dependable quantity intelligence for high-rise and lender-monitored projects where precision directly impacts <strong>cost control and decision-making</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <canvas class="section-canvas" id="contactBg"></canvas>
+  <div class="contact-wrap">
+    <div class="s-label" style="justify-content:center;">06 · Get In Touch</div>
+    <h2 class="contact-headline" id="contactHeading">
+      Let's Build
+      <em>Cost Certainty</em>
+      Into Your Project
+    </h2>
+    <p class="contact-sub">
+      Whether you're at concept stage and need a realistic cost plan, mid-construction and want an independent audit, or preparing a tender package — let's talk about protecting your project's financial integrity.
+    </p>
+
+    <div class="availability reveal">
+      <div class="avail-dot"></div>
+      <div class="avail-text">Available for new engagements · Remote &amp; On-site</div>
+    </div>
+
+    <div class="contact-cards reveal">
+      <a href="tel:+919026937051" class="c-card">
+        <div class="c-icon">📱</div>
+        <div>
+          <div class="c-label">Phone</div>
+          <div class="c-val">+91 9026937051</div>
+        </div>
+      </a>
+      <a href="mailto:iafawanish@gmail.com" class="c-card">
+        <div class="c-icon">✉️</div>
+        <div>
+          <div class="c-label">Email</div>
+          <div class="c-val">iafawanish@gmail.com</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/iafavineeshparjapati" target="_blank" rel="noopener" class="c-card">
+        <div class="c-icon">🔗</div>
+        <div>
+          <div class="c-label">LinkedIn</div>
+          <div class="c-val">linkedin.com/in/iafavineeshparjapati</div>
+        </div>
+      </a>
+    </div>
+
+    <a href="mailto:iafawanish@gmail.com" class="btn-primary contact-cta" style="margin-bottom:20px; display:inline-flex;">
+      Send a Project Brief →
+    </a>
+
+    <div style="margin-bottom: 40px;">
+      <a href="https://drive.google.com/drive/folders/1PZ7igwFcK3jo_sWCxZhzZwR58nAEGooF?usp=sharing" target="_blank" rel="noopener" style="
+        display: inline-flex; align-items: center; gap: 10px;
+        border: 1px solid var(--gold-border);
+        color: var(--slate-light);
+        padding: 13px 28px;
+        font-family: var(--font-mono);
+        font-size: 0.74rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all var(--transition);
+      " onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+         onmouseout="this.style.borderColor='var(--gold-border)'; this.style.color='var(--slate-light)'">
+        📁 View Sample Project Work ↗
+      </a>
+    </div>
+
+    <p class="contact-note">
+      Based in <span>Gonda, Uttar Pradesh, India</span> · Open to engagements across India and remote consulting
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-left">
+    &copy; <span id="yr"></span> <strong>Avineesh Parjapati</strong> · Civil Engineer &amp; Quantity Surveyor · Gonda, UP
+  </div>
+  <div class="footer-right">
+    <a href="#hero">Top ↑</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script>
+/* Dynamic year */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* Mobile menu */
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+  const open = menu.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* Nav: scrolled class + active link highlighting */
+const navbar  = document.getElementById('navbar');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  navbar.classList.toggle('scrolled', y > 60);
+
+  // active link
+  let current = '';
+  sections.forEach(s => {
+    if (y >= s.offsetTop - 160) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
+
+/* Reveal + skill bar animation on scroll */
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+
+    // animate any bar-fill elements inside this card
+    entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+      const w = bar.dataset.width || '0';
+      setTimeout(() => { bar.style.width = w + '%'; }, 320);
+    });
+
+    revealObs.unobserve(entry.target);
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+</script>
+<!-- ═══ SECTION ANIMATIONS ═══ -->
+<script>
+(function(){
+
+  /* ── UTILITY ── */
+  function initCanvas(id) {
+    const c = document.getElementById(id); if(!c) return null;
+    const ctx = c.getContext('2d');
+    function resize(){
+      c.width  = c.offsetWidth;
+      c.height = c.offsetHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    return { c, ctx, get W(){ return c.width; }, get H(){ return c.height; } };
+  }
+
+  let t0 = performance.now();
+  function T(){ return (performance.now() - t0) / 1000; }
+
+  /* ════════════════════════════════════════════
+     ABOUT — Animated blueprint/floor plan lines
+     Slow-drawing structural grid + section marks
+  ════════════════════════════════════════════ */
+  const about = initCanvas('aboutBg');
+  if(about){
+    const lines = [];
+    for(let i=0;i<18;i++) lines.push({
+      x1:Math.random(), y1:Math.random(), x2:Math.random(), y2:Math.random(),
+      prog:Math.random(), speed:0.0008+Math.random()*0.0012,
+      a: 0.04+Math.random()*0.07, gold: Math.random()>0.6
+    });
+    const circles = Array.from({length:8},()=>({
+      x:Math.random(), y:Math.random(),
+      r:30+Math.random()*80, a:0.02+Math.random()*0.04,
+      phase:Math.random()*Math.PI*2
+    }));
+    function drawAbout(){
+      const {ctx,W,H} = about;
+      ctx.clearRect(0,0,W,H);
+      const t = T();
+      // Dashed construction lines
+      lines.forEach(l=>{
+        l.prog = (l.prog + l.speed) % 1.6;
+        const prog = Math.min(l.prog, 1);
+        ctx.setLineDash([6,4]);
+        ctx.strokeStyle = l.gold ? `rgba(201,168,76,${l.a})` : `rgba(79,160,247,${l.a*0.7})`;
+        ctx.lineWidth = 0.7;
+        ctx.beginPath();
+        ctx.moveTo(l.x1*W, l.y1*H);
+        ctx.lineTo(l.x1*W + (l.x2*W - l.x1*W)*prog, l.y1*H + (l.y2*H - l.y1*H)*prog);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        // Endpoint dot
+        if(prog > 0.98){
+          ctx.beginPath();
+          ctx.arc(l.x2*W, l.y2*H, 2.5, 0, Math.PI*2);
+          ctx.fillStyle = `rgba(201,168,76,${l.a*2})`;
+          ctx.fill();
+        }
+      });
+      // Pulsing section circles (like column footprint rings)
+      circles.forEach(c=>{
+        const pulse = 0.6 + 0.4*Math.sin(t*0.8 + c.phase);
+        ctx.beginPath();
+        ctx.arc(c.x*W, c.y*H, c.r*pulse, 0, Math.PI*2);
+        ctx.strokeStyle = `rgba(201,168,76,${c.a * pulse})`;
+        ctx.lineWidth = 0.8;
+        ctx.setLineDash([3,6]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      });
+      // Corner dimension brackets
+      const bra = [[0.02,0.02],[0.95,0.02],[0.02,0.95],[0.95,0.95]];
+      bra.forEach(([bx,by])=>{
+        const px=bx*W, py=by*H, s=22, flip1=bx>0.5?-1:1, flip2=by>0.5?-1:1;
+        ctx.strokeStyle='rgba(201,168,76,0.1)';ctx.lineWidth=1;ctx.setLineDash([]);
+        ctx.beginPath();
+        ctx.moveTo(px,py); ctx.lineTo(px+s*flip1,py);
+        ctx.moveTo(px,py); ctx.lineTo(px,py+s*flip2);
+        ctx.stroke();
+      });
+      requestAnimationFrame(drawAbout);
+    }
+    requestAnimationFrame(drawAbout);
+  }
+
+  /* ════════════════════════════════════════════
+     SKILLS — Floating hexagonal grid (BIM cells)
+     + animated bar chart silhouette in corner
+  ════════════════════════════════════════════ */
+  const skills = initCanvas('skillsBg');
+  if(skills){
+    function hexPath(ctx,cx,cy,r){
+      ctx.beginPath();
+      for(let i=0;i<6;i++){
+        const a=Math.PI/180*(60*i-30);
+        i===0 ? ctx.moveTo(cx+r*Math.cos(a),cy+r*Math.sin(a))
+              : ctx.lineTo(cx+r*Math.cos(a),cy+r*Math.sin(a));
+      }
+      ctx.closePath();
+    }
+    const hexes = [];
+    function buildHexes(W,H){
+      hexes.length=0;
+      const R=34, hW=R*Math.sqrt(3), hH=R*1.5;
+      for(let row=-1;row<Math.ceil(H/hH)+1;row++){
+        for(let col=-1;col<Math.ceil(W/hW)+2;col++){
+          hexes.push({
+            cx: col*hW + (row%2)*hW/2,
+            cy: row*hH,
+            phase: Math.random()*Math.PI*2,
+            a: 0.018+Math.random()*0.03,
+            speed: 0.25+Math.random()*0.5
+          });
+        }
+      }
+    }
+    buildHexes(skills.W, skills.H);
+    window.addEventListener('resize',()=>buildHexes(skills.W, skills.H));
+
+    function drawSkills(){
+      const {ctx,W,H} = skills;
+      ctx.clearRect(0,0,W,H);
+      const t = T();
+      hexes.forEach(h=>{
+        const pulse = 0.4+0.6*Math.abs(Math.sin(t*h.speed+h.phase));
+        hexPath(ctx,h.cx,h.cy,33);
+        ctx.strokeStyle=`rgba(201,168,76,${h.a*pulse})`;
+        ctx.lineWidth=0.6;
+        ctx.stroke();
+      });
+      // Animated bar-chart ghost (top-right corner)
+      const bars=[0.55,0.8,0.65,1.0,0.7,0.5];
+      bars.forEach((bh,i)=>{
+        const bx=W-90+i*14, bBot=H*0.9;
+        const animated = bh * (0.7+0.3*Math.sin(t*0.6+i*0.8));
+        ctx.fillStyle=`rgba(201,168,76,${0.06+i*0.01})`;
+        ctx.fillRect(bx, bBot - animated*60, 10, animated*60);
+        ctx.strokeStyle=`rgba(201,168,76,0.15)`;
+        ctx.lineWidth=0.5;
+        ctx.strokeRect(bx, bBot - animated*60, 10, animated*60);
+      });
+      requestAnimationFrame(drawSkills);
+    }
+    requestAnimationFrame(drawSkills);
+  }
+
+  /* ════════════════════════════════════════════
+     PROJECTS — Isometric grid + floating BOQ rows
+     Scrolling data-table lines, blueprint marks
+  ════════════════════════════════════════════ */
+  const projects = initCanvas('projectsBg');
+  if(projects){
+    const rows = Array.from({length:20},(_,i)=>({
+      y: Math.random(), speed:0.00015+Math.random()*0.0002,
+      a:0.025+Math.random()*0.04, cols:[...Array(5)].map(()=>Math.random()*0.18+0.04)
+    }));
+    function drawProjects(){
+      const {ctx,W,H} = projects;
+      ctx.clearRect(0,0,W,H);
+      const t = T();
+
+      // Isometric grid lines
+      const step=60, skew=0.5;
+      ctx.strokeStyle='rgba(201,168,76,0.025)';
+      ctx.lineWidth=0.7;
+      for(let x=-H;x<W+H;x+=step){
+        ctx.beginPath();
+        ctx.moveTo(x,0); ctx.lineTo(x+H*skew,H);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x,0); ctx.lineTo(x-H*skew,H);
+        ctx.stroke();
+      }
+
+      // Scrolling BOQ rows (spreadsheet ghost)
+      const scrollY = (t * 18) % H;
+      rows.forEach((row,ri)=>{
+        const ry = ((row.y * H + scrollY) % H);
+        const colWidths=[0.18,0.12,0.1,0.12,0.1];
+        let cx2=W*0.55;
+        colWidths.forEach((cw,ci)=>{
+          ctx.fillStyle=`rgba(201,168,76,${row.a*(0.5+0.5*Math.sin(t+ri+ci))})`;
+          ctx.fillRect(cx2+2, ry, W*cw-4, 1.5);
+          cx2 += W*cw;
+        });
+        // Row line
+        ctx.strokeStyle=`rgba(201,168,76,${row.a*0.4})`;
+        ctx.lineWidth=0.5;
+        ctx.beginPath();
+        ctx.moveTo(W*0.52, ry+2); ctx.lineTo(W*0.98, ry+2);
+        ctx.stroke();
+      });
+
+      // Floating measurement annotations (left side)
+      const annots=[{x:0.04,y:0.2},{x:0.06,y:0.55},{x:0.03,y:0.78}];
+      annots.forEach((an,i)=>{
+        const ax=an.x*W, ay=an.y*H + Math.sin(t*0.5+i)*8;
+        const pulse=0.5+0.5*Math.sin(t*0.7+i*1.3);
+        ctx.strokeStyle=`rgba(201,168,76,${0.08*pulse})`;
+        ctx.lineWidth=0.8; ctx.setLineDash([4,3]);
+        ctx.beginPath();
+        ctx.moveTo(ax,ay-16); ctx.lineTo(ax,ay+16);
+        ctx.moveTo(ax-12,ay); ctx.lineTo(ax+12,ay);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.beginPath();
+        ctx.arc(ax,ay,4,0,Math.PI*2);
+        ctx.strokeStyle=`rgba(201,168,76,${0.15*pulse})`;
+        ctx.stroke();
+      });
+      requestAnimationFrame(drawProjects);
+    }
+    requestAnimationFrame(drawProjects);
+  }
+
+  /* ════════════════════════════════════════════
+     WHY — Structural truss animation
+     Steel frame lattice in background
+  ════════════════════════════════════════════ */
+  const why = initCanvas('whyBg');
+  if(why){
+    function drawWhy(){
+      const {ctx,W,H} = why;
+      ctx.clearRect(0,0,W,H);
+      const t = T();
+      // Truss lattice
+      const cellW=80, cellH=55;
+      for(let col=0;col<Math.ceil(W/cellW)+1;col++){
+        for(let row=0;row<Math.ceil(H/cellH)+1;row++){
+          const x=col*cellW, y=row*cellH;
+          const pulse=0.4+0.6*Math.abs(Math.sin(t*0.4+col*0.5+row*0.7));
+          const alpha=0.03*pulse;
+          ctx.strokeStyle=`rgba(201,168,76,${alpha})`;
+          ctx.lineWidth=0.7;
+          // Top chord
+          ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x+cellW,y); ctx.stroke();
+          // Bottom chord
+          ctx.beginPath(); ctx.moveTo(x,y+cellH); ctx.lineTo(x+cellW,y+cellH); ctx.stroke();
+          // Vertical
+          ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x,y+cellH); ctx.stroke();
+          // Diagonal
+          ctx.strokeStyle=`rgba(201,168,76,${alpha*0.6})`;
+          ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x+cellW,y+cellH); ctx.stroke();
+          // Node circles
+          ctx.beginPath(); ctx.arc(x,y,2.5,0,Math.PI*2);
+          ctx.fillStyle=`rgba(201,168,76,${alpha*3})`;
+          ctx.fill();
+        }
+      }
+      requestAnimationFrame(drawWhy);
+    }
+    requestAnimationFrame(drawWhy);
+  }
+
+  /* ════════════════════════════════════════════
+     SERVICES — Flowing measurement tape / 
+     Animated dimension lines & cost arrows
+  ════════════════════════════════════════════ */
+  const services = initCanvas('servicesBg');
+  if(services){
+    const arrows = Array.from({length:12},()=>({
+      x:Math.random(), y:Math.random(),
+      angle: Math.random()*Math.PI*2,
+      speed:(Math.random()-0.5)*0.003,
+      len:40+Math.random()*80, a:0.04+Math.random()*0.06
+    }));
+    function drawServices(){
+      const {ctx,W,H} = services;
+      ctx.clearRect(0,0,W,H);
+      const t = T();
+      // Flowing tape measure lines (horizontal)
+      for(let row=0;row<8;row++){
+        const y = (row/8)*H + Math.sin(t*0.3+row)*5;
+        const scroll = (t*12) % 28;
+        ctx.strokeStyle=`rgba(201,168,76,${0.03+row*0.003})`;
+        ctx.lineWidth=0.5; ctx.setLineDash([4,24]);
+        ctx.lineDashOffset=-scroll;
+        ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke();
+        ctx.setLineDash([]); ctx.lineDashOffset=0;
+        // Tick marks
+        for(let x=0;x<W;x+=28){
+          const tx=x+scroll;
+          ctx.strokeStyle=`rgba(201,168,76,0.06)`;
+          ctx.lineWidth=0.6;
+          ctx.beginPath(); ctx.moveTo(tx,y-4); ctx.lineTo(tx,y+4); ctx.stroke();
+        }
+      }
+      // Floating cost arrows
+      arrows.forEach(ar=>{
+        ar.angle += ar.speed;
+        const ax=ar.x*W, ay=ar.y*H;
+        const ex=ax+Math.cos(ar.angle)*ar.len, ey=ay+Math.sin(ar.angle)*ar.len;
+        ctx.strokeStyle=`rgba(100,255,218,${ar.a*0.6})`;
+        ctx.lineWidth=0.7;
+        ctx.beginPath(); ctx.moveTo(ax,ay); ctx.lineTo(ex,ey); ctx.stroke();
+        // Arrowhead
+        const headA1=ar.angle+2.7, headA2=ar.angle-2.7;
+        ctx.beginPath();
+        ctx.moveTo(ex,ey);
+        ctx.lineTo(ex+Math.cos(headA1)*7, ey+Math.sin(headA1)*7);
+        ctx.lineTo(ex+Math.cos(headA2)*7, ey+Math.sin(headA2)*7);
+        ctx.closePath();
+        ctx.fillStyle=`rgba(100,255,218,${ar.a*0.4})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(drawServices);
+    }
+    requestAnimationFrame(drawServices);
+  }
+
+  /* ════════════════════════════════════════════
+     TOOLS — Rotating gear + circuit board nodes
+     Tech grid with pulsing connection dots
+  ════════════════════════════════════════════ */
+  const tools = initCanvas('toolsBg');
+  if(tools){
+    function drawGear(ctx,cx,cy,outerR,innerR,teeth,angle,alpha){
+      ctx.strokeStyle=`rgba(201,168,76,${alpha})`;
+      ctx.lineWidth=0.8;
+      ctx.beginPath();
+      const step=Math.PI*2/teeth;
+      for(let i=0;i<teeth;i++){
+        const a1=angle+i*step, a2=a1+step*0.4, a3=a1+step*0.6, a4=a1+step;
+        ctx.lineTo(Math.cos(a1)*innerR+cx, Math.sin(a1)*innerR+cy);
+        ctx.lineTo(Math.cos(a1)*outerR+cx, Math.sin(a1)*outerR+cy);
+        ctx.lineTo(Math.cos(a2)*outerR+cx, Math.sin(a2)*outerR+cy);
+        ctx.lineTo(Math.cos(a3)*innerR+cx, Math.sin(a3)*innerR+cy);
+      }
+      ctx.closePath(); ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx,cy,innerR*0.45,0,Math.PI*2); ctx.stroke();
+    }
+    const nodes2 = Array.from({length:24},()=>({x:Math.random(),y:Math.random(),r:2+Math.random()*2,phase:Math.random()*Math.PI*2}));
+    function drawTools(){
+      const {ctx,W,H} = tools;
+      ctx.clearRect(0,0,W,H);
+      const t=T();
+      // Gears
+      drawGear(ctx,W*0.88,H*0.15,55,40,12,t*0.4,0.06);
+      drawGear(ctx,W*0.88-82,H*0.15,32,23,8,-t*0.68,0.04);
+      drawGear(ctx,W*0.04,H*0.82,40,28,10,t*0.55,0.05);
+      // Circuit grid
+      const gx=38,gy=38;
+      for(let cx2=0;cx2<W;cx2+=gx){
+        for(let cy2=0;cy2<H;cy2+=gy){
+          ctx.strokeStyle='rgba(79,160,247,0.025)';
+          ctx.lineWidth=0.5;
+          ctx.strokeRect(cx2,cy2,gx,gy);
+        }
+      }
+      // Pulsing nodes
+      nodes2.forEach(n=>{
+        const pulse=0.4+0.6*Math.abs(Math.sin(t*1.1+n.phase));
+        ctx.beginPath(); ctx.arc(n.x*W,n.y*H,n.r,0,Math.PI*2);
+        ctx.fillStyle=`rgba(201,168,76,${0.08*pulse})`;
+        ctx.fill();
+        ctx.strokeStyle=`rgba(201,168,76,${0.12*pulse})`;
+        ctx.lineWidth=0.6; ctx.stroke();
+        // Ripple
+        ctx.beginPath(); ctx.arc(n.x*W,n.y*H,n.r+4+4*pulse,0,Math.PI*2);
+        ctx.strokeStyle=`rgba(201,168,76,${0.04*pulse})`;
+        ctx.stroke();
+      });
+      // Connection lines between close nodes
+      for(let i=0;i<nodes2.length;i++){
+        for(let j=i+1;j<nodes2.length;j++){
+          const dx=(nodes2[i].x-nodes2[j].x)*W, dy=(nodes2[i].y-nodes2[j].y)*H;
+          const dist=Math.sqrt(dx*dx+dy*dy);
+          if(dist<120){
+            ctx.strokeStyle=`rgba(201,168,76,${0.04*(1-dist/120)})`;
+            ctx.lineWidth=0.5;
+            ctx.beginPath();
+            ctx.moveTo(nodes2[i].x*W,nodes2[i].y*H);
+            ctx.lineTo(nodes2[j].x*W,nodes2[j].y*H);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawTools);
+    }
+    requestAnimationFrame(drawTools);
+  }
+
+  /* ════════════════════════════════════════════
+     CONTACT — Radar / sonar ping animation
+     Expanding rings from centre + grid
+  ════════════════════════════════════════════ */
+  const contact = initCanvas('contactBg');
+  if(contact){
+    const pings=[];
+    function addPing(cx,cy){ pings.push({cx,cy,r:0,maxR:Math.max(contact.W,contact.H)*0.7,alpha:0.18,speed:1.4}); }
+    addPing(0.5,0.5);
+    setInterval(()=>{ if(contact) addPing(0.5,0.5); }, 2800);
+    function drawContact(){
+      const {ctx,W,H} = contact;
+      ctx.clearRect(0,0,W,H);
+      const t=T();
+      // Radar grid lines
+      const cx2=W/2, cy2=H/2;
+      for(let i=1;i<=6;i++){
+        ctx.beginPath(); ctx.arc(cx2,cy2,i*(Math.max(W,H)*0.12),0,Math.PI*2);
+        ctx.strokeStyle=`rgba(201,168,76,${0.025+i*0.005})`;
+        ctx.lineWidth=0.6; ctx.stroke();
+      }
+      // Cross hairs
+      ctx.strokeStyle='rgba(201,168,76,0.04)'; ctx.lineWidth=0.6;
+      ctx.beginPath(); ctx.moveTo(cx2,0); ctx.lineTo(cx2,H); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0,cy2); ctx.lineTo(W,cy2); ctx.stroke();
+      // Rotating sweep line
+      const sweep=t*0.9;
+      const sweepGrd=ctx.createConicalGradient?.(cx2,cy2,sweep) || null;
+      ctx.strokeStyle='rgba(100,255,218,0.06)'; ctx.lineWidth=1.5;
+      ctx.beginPath();
+      ctx.moveTo(cx2,cy2);
+      ctx.lineTo(cx2+Math.cos(sweep)*Math.max(W,H), cy2+Math.sin(sweep)*Math.max(W,H));
+      ctx.stroke();
+      // Glow trail
+      for(let trail=1;trail<=8;trail++){
+        const ta=sweep-trail*0.08;
+        ctx.strokeStyle=`rgba(100,255,218,${0.004*(9-trail)})`;
+        ctx.lineWidth=1.2;
+        ctx.beginPath();
+        ctx.moveTo(cx2,cy2);
+        ctx.lineTo(cx2+Math.cos(ta)*Math.max(W,H), cy2+Math.sin(ta)*Math.max(W,H));
+        ctx.stroke();
+      }
+      // Pings
+      for(let i=pings.length-1;i>=0;i--){
+        const p=pings[i];
+        p.r += p.speed;
+        p.alpha *= 0.988;
+        if(p.r > p.maxR){ pings.splice(i,1); continue; }
+        ctx.beginPath(); ctx.arc(p.cx*W,p.cy*H,p.r,0,Math.PI*2);
+        ctx.strokeStyle=`rgba(100,255,218,${p.alpha})`;
+        ctx.lineWidth=1; ctx.stroke();
+      }
+      requestAnimationFrame(drawContact);
+    }
+    requestAnimationFrame(drawContact);
+  }
+
+})();
+</script>
+</body>
+</html>
+<script>
+(function(){
+  const canvas = document.getElementById('heroBg');
+  const ctx = canvas.getContext('2d');
+  let W, H, raf;
+
+  function resize(){
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const GOLD   = 'rgba(201,168,76,';
+  const BLUE   = 'rgba(79,160,247,';
+  const GREEN  = 'rgba(100,255,218,';
+  const WHITE  = 'rgba(238,242,255,';
+
+  /* ── BLUEPRINT GRID ── */
+  function drawGrid(t){
+    const sz = 56;
+    const ox = (t * 0.3) % sz;
+    const oy = (t * 0.15) % sz;
+    ctx.strokeStyle = GOLD+'0.028)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    for(let x = -sz + ox; x < W + sz; x += sz){
+      ctx.moveTo(x, 0); ctx.lineTo(x, H);
+    }
+    for(let y = -sz + oy; y < H + sz; y += sz){
+      ctx.moveTo(0, y); ctx.lineTo(W, y);
+    }
+    ctx.stroke();
+    // Major grid lines
+    ctx.strokeStyle = GOLD+'0.055)';
+    ctx.lineWidth = 0.8;
+    ctx.beginPath();
+    for(let x = -sz*4 + (ox*4)%( sz*4); x < W + sz*4; x += sz*4){
+      ctx.moveTo(x, 0); ctx.lineTo(x, H);
+    }
+    for(let y = -sz*4 + (oy*4)%(sz*4); y < H + sz*4; y += sz*4){
+      ctx.moveTo(0, y); ctx.lineTo(W, y);
+    }
+    ctx.stroke();
+  }
+
+  /* ── CITYSCAPE SKYLINE (bottom) ── */
+  const buildings = [];
+  (function initBuildings(){
+    const count = 22;
+    for(let i = 0; i < count; i++){
+      const bw = 28 + Math.random()*55;
+      buildings.push({
+        x: (W / count) * i - 30 + Math.random()*20,
+        w: bw,
+        h: 80 + Math.random()*220,
+        floors: Math.floor(4 + Math.random()*14),
+        cols: Math.floor(2 + Math.random()*4),
+        hasAntenna: Math.random() > 0.5,
+        hasCrane: Math.random() > 0.72,
+        phase: Math.random()*Math.PI*2,
+        glowRate: 0.4 + Math.random()*0.6
+      });
+    }
+    buildings.sort((a,b)=> a.h - b.h);
+  })();
+
+  function drawBuildings(t){
+    const baseY = H;
+    buildings.forEach((b, idx) => {
+      const bx = b.x;
+      const by = baseY - b.h;
+      const depth = idx / buildings.length;
+
+      // Building body
+      const alpha = 0.06 + depth * 0.12;
+      ctx.fillStyle = `rgba(11,23,41,${alpha + 0.04})`;
+      ctx.fillRect(bx, by, b.w, b.h);
+
+      // Building outline
+      ctx.strokeStyle = GOLD+(0.08 + depth*0.18)+')';
+      ctx.lineWidth = 0.8;
+      ctx.strokeRect(bx, by, b.w, b.h);
+
+      // Floor lines
+      const floorH = b.h / b.floors;
+      ctx.strokeStyle = GOLD+(0.06 + depth*0.1)+')';
+      ctx.lineWidth = 0.4;
+      for(let f = 1; f < b.floors; f++){
+        const fy = by + f * floorH;
+        ctx.beginPath();
+        ctx.moveTo(bx, fy); ctx.lineTo(bx + b.w, fy);
+        ctx.stroke();
+      }
+
+      // Windows
+      const colW = b.w / b.cols;
+      for(let c = 0; c < b.cols; c++){
+        for(let f = 0; f < b.floors; f++){
+          const wx = bx + c * colW + colW*0.2;
+          const wy = by + f * floorH + floorH*0.2;
+          const ww = colW * 0.6;
+          const wh = floorH * 0.55;
+          const lit = Math.sin(t * b.glowRate + c*1.3 + f*0.7 + b.phase) > -0.2;
+          if(lit){
+            const a = 0.15 + depth*0.3 + Math.sin(t*b.glowRate + c+f)*0.1;
+            ctx.fillStyle = GOLD+Math.max(0.05,a)+')';
+            ctx.fillRect(wx, wy, ww, wh);
+          }
+        }
+      }
+
+      // Antenna
+      if(b.hasAntenna){
+        ctx.strokeStyle = GOLD+(0.3 + depth*0.4)+')';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(bx + b.w/2, by);
+        ctx.lineTo(bx + b.w/2, by - 18 - depth*12);
+        ctx.stroke();
+        // Blinking light
+        const blink = Math.sin(t * 2.5 + b.phase) > 0;
+        if(blink){
+          ctx.beginPath();
+          ctx.arc(bx + b.w/2, by - 18 - depth*12, 2, 0, Math.PI*2);
+          ctx.fillStyle = 'rgba(255,80,80,0.85)';
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(bx + b.w/2, by - 18 - depth*12, 5, 0, Math.PI*2);
+          ctx.fillStyle = 'rgba(255,80,80,0.15)';
+          ctx.fill();
+        }
+      }
+
+      // Tower Crane
+      if(b.hasCrane && depth > 0.5){
+        const cx = bx + b.w - 2;
+        const cy = by - 5;
+        const armLen = 55 + depth*30;
+        const counterLen = 18;
+        const mastH = 28 + depth*15;
+        const swingAngle = Math.sin(t * 0.4 + b.phase) * 0.3;
+
+        // Mast
+        ctx.strokeStyle = GOLD+(0.5 + depth*0.3)+')';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy); ctx.lineTo(cx, cy - mastH);
+        ctx.stroke();
+
+        // Jib (rotates slightly)
+        const jibEndX = cx + Math.cos(swingAngle) * armLen;
+        const jibEndY = cy - mastH + Math.sin(swingAngle) * armLen * 0.1;
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - mastH); ctx.lineTo(jibEndX, jibEndY);
+        ctx.stroke();
+
+        // Counter jib
+        ctx.lineWidth = 0.9;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - mastH);
+        ctx.lineTo(cx - counterLen, cy - mastH + 3);
+        ctx.stroke();
+
+        // Stay cables
+        ctx.strokeStyle = GOLD+(0.3 + depth*0.2)+')';
+        ctx.lineWidth = 0.6;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - mastH + 4);
+        ctx.lineTo(jibEndX, jibEndY);
+        ctx.moveTo(cx, cy - mastH + 4);
+        ctx.lineTo(cx - counterLen, cy - mastH + 3);
+        ctx.stroke();
+
+        // Hook wire
+        const hookX = cx + Math.cos(swingAngle) * armLen * 0.75;
+        const hookDrop = 12 + Math.sin(t * 0.8 + b.phase) * 6;
+        ctx.strokeStyle = GOLD+'0.4)';
+        ctx.lineWidth = 0.7;
+        ctx.setLineDash([2,2]);
+        ctx.beginPath();
+        ctx.moveTo(hookX, jibEndY - 2);
+        ctx.lineTo(hookX, jibEndY + hookDrop);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        // Hook
+        ctx.beginPath();
+        ctx.arc(hookX, jibEndY + hookDrop + 2, 2, 0, Math.PI);
+        ctx.strokeStyle = GOLD+'0.6)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    });
+  }
+
+  /* ── FLOATING CONSTRUCTION PARTICLES ── */
+  const particles = [];
+  (function initParticles(){
+    const types = ['node','dim','measure','angle'];
+    for(let i=0; i<55; i++){
+      particles.push({
+        x: Math.random()*W,
+        y: Math.random()*H,
+        vx: (Math.random()-0.5)*0.22,
+        vy: -0.08 - Math.random()*0.18,
+        size: 1 + Math.random()*2.5,
+        alpha: 0.08 + Math.random()*0.35,
+        type: types[Math.floor(Math.random()*types.length)],
+        phase: Math.random()*Math.PI*2,
+        rot: Math.random()*Math.PI*2,
+        rotV: (Math.random()-0.5)*0.008
+      });
+    }
+  })();
+
+  function drawParticles(t){
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.rotV;
+      if(p.y < -20) p.y = H + 10;
+      if(p.x < -20) p.x = W + 10;
+      if(p.x > W+20) p.x = -10;
+
+      const pulse = 0.5 + 0.5 * Math.sin(t*1.2 + p.phase);
+      const a = p.alpha * (0.6 + 0.4*pulse);
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+
+      if(p.type === 'node'){
+        // Blueprint cross-node
+        ctx.strokeStyle = GOLD+a+')';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(-p.size*2, 0); ctx.lineTo(p.size*2, 0);
+        ctx.moveTo(0, -p.size*2); ctx.lineTo(0, p.size*2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0,0, p.size*0.8, 0, Math.PI*2);
+        ctx.strokeStyle = GOLD+(a*0.6)+')';
+        ctx.stroke();
+      } else if(p.type === 'dim'){
+        // Dimension line
+        const len = p.size*7;
+        ctx.strokeStyle = GOLD+a+')';
+        ctx.lineWidth = 0.7;
+        ctx.beginPath();
+        ctx.moveTo(-len,0); ctx.lineTo(len,0);
+        ctx.moveTo(-len,-3); ctx.lineTo(-len,3);
+        ctx.moveTo(len,-3); ctx.lineTo(len,3);
+        ctx.stroke();
+      } else if(p.type === 'measure'){
+        // Small square (column section)
+        ctx.strokeStyle = BLUE+a+')';
+        ctx.lineWidth = 0.8;
+        const s = p.size*2.5;
+        ctx.strokeRect(-s/2,-s/2,s,s);
+        ctx.strokeStyle = BLUE+(a*0.4)+')';
+        ctx.beginPath();
+        ctx.moveTo(-s/2,-s/2); ctx.lineTo(s/2,s/2);
+        ctx.moveTo(s/2,-s/2); ctx.lineTo(-s/2,s/2);
+        ctx.stroke();
+      } else {
+        // Angle/triangle (structural node)
+        ctx.strokeStyle = GREEN+a+')';
+        ctx.lineWidth = 0.7;
+        const r = p.size*2.5;
+        ctx.beginPath();
+        ctx.moveTo(0,-r);
+        ctx.lineTo(r*0.866, r*0.5);
+        ctx.lineTo(-r*0.866, r*0.5);
+        ctx.closePath();
+        ctx.stroke();
+      }
+      ctx.restore();
+    });
+  }
+
+  /* ── CONNECTING LINES BETWEEN NODES ── */
+  function drawConnections(){
+    const nodes = particles.filter(p => p.type === 'node');
+    for(let i=0; i<nodes.length; i++){
+      for(let j=i+1; j<nodes.length; j++){
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if(dist < 140){
+          const a = (1 - dist/140) * 0.06;
+          ctx.strokeStyle = GOLD+a+')';
+          ctx.lineWidth = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  /* ── RADIAL GLOW ORBS ── */
+  function drawOrbs(t){
+    // Gold orb top-right
+    const grd1 = ctx.createRadialGradient(W*0.82, H*0.15, 0, W*0.82, H*0.15, 320);
+    grd1.addColorStop(0, 'rgba(201,168,76,0.07)');
+    grd1.addColorStop(1, 'transparent');
+    ctx.fillStyle = grd1;
+    ctx.fillRect(0,0,W,H);
+
+    // Blue orb bottom-left
+    const grd2 = ctx.createRadialGradient(W*0.08 + Math.sin(t*0.3)*30, H*0.8, 0, W*0.08, H*0.8, 260);
+    grd2.addColorStop(0, 'rgba(79,160,247,0.055)');
+    grd2.addColorStop(1, 'transparent');
+    ctx.fillStyle = grd2;
+    ctx.fillRect(0,0,W,H);
+
+    // Vignette
+    const vgrd = ctx.createRadialGradient(W/2, H/2, H*0.25, W/2, H/2, H);
+    vgrd.addColorStop(0, 'transparent');
+    vgrd.addColorStop(1, 'rgba(8,15,30,0.75)');
+    ctx.fillStyle = vgrd;
+    ctx.fillRect(0,0,W,H);
+  }
+
+  /* ── MAIN LOOP ── */
+  let startTime = null;
+  function loop(ts){
+    if(!startTime) startTime = ts;
+    const t = (ts - startTime) / 1000;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Base bg
+    ctx.fillStyle = '#080f1e';
+    ctx.fillRect(0,0,W,H);
+
+    drawGrid(t);
+    drawOrbs(t);
+    drawBuildings(t);
+    drawConnections();
+    drawParticles(t);
+
+    raf = requestAnimationFrame(loop);
+  }
+  raf = requestAnimationFrame(loop);
+})();
+</script>
+
+<!-- ═══ 3D CIVIL ENGINEERING HEADING ANIMATIONS ═══ -->
+<script>
+(function(){
+  'use strict';
+  const t0 = performance.now();
+  function T(){ return (performance.now() - t0) / 1000; }
+  const GOLD  = 'rgba(201,168,76,';
+  const BLUE  = 'rgba(79,160,247,';
+
+  function attachHeadingCanvas(el, drawFn, h){
+    if(!el) return;
+    const cvs = document.createElement('canvas');
+    cvs.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:0;';
+    const parent = el.parentElement;
+    if(window.getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
+    parent.insertBefore(cvs, el);
+    el.style.position = 'relative';
+    el.style.zIndex = '2';
+    function resize(){
+      const rect = el.getBoundingClientRect();
+      const pw = parent.getBoundingClientRect().width || rect.width + 300;
+      cvs.width  = Math.max(pw, rect.width + 300);
+      cvs.height = h || Math.max(rect.height + 80, 120);
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    const ctx = cvs.getContext('2d');
+    function loop(){ ctx.clearRect(0,0,cvs.width,cvs.height); drawFn(ctx,cvs.width,cvs.height,T()); requestAnimationFrame(loop); }
+    requestAnimationFrame(loop);
+  }
+
+  /* ── ABOUT — Blueprint floor plan rings ── */
+  function drawAbout(ctx,W,H,t){
+    const gs=30;
+    for(let x=0;x<W;x+=gs){ ctx.strokeStyle=BLUE+'0.04)'; ctx.lineWidth=0.4; ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+    for(let y=0;y<H;y+=gs){ ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
+    [[60,H/2,0.4],[W-60,H/2,-0.3]].forEach(([cx,cy,spd])=>{
+      ctx.save(); ctx.translate(cx,cy); ctx.rotate(t*spd);
+      ctx.strokeStyle=GOLD+'0.14)'; ctx.lineWidth=0.9;
+      ctx.strokeRect(-28,-20,56,40);
+      ctx.beginPath(); ctx.moveTo(0,-20); ctx.lineTo(0,20); ctx.moveTo(-28,0); ctx.lineTo(28,0); ctx.stroke();
+      ctx.restore();
+    });
+    ctx.strokeStyle=GOLD+'0.08)'; ctx.lineWidth=0.6; ctx.setLineDash([5,4]);
+    ctx.beginPath(); ctx.moveTo(W*0.2,H*0.85); ctx.lineTo(W*0.8,H*0.85); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.beginPath(); ctx.moveTo(W*0.2,H*0.8); ctx.lineTo(W*0.2,H*0.9); ctx.moveTo(W*0.8,H*0.8); ctx.lineTo(W*0.8,H*0.9); ctx.stroke();
+  }
+
+  /* ── SKILLS — Hex BIM grid + rebar sections ── */
+  function drawSkills(ctx,W,H,t){
+    const R=20, hx=R*Math.sqrt(3), hy=R*1.5;
+    for(let row=-1;row<H/hy+2;row++) for(let col=-1;col<W/hx+2;col++){
+      const ox=col*hx+(row%2)*hx/2, oy=row*hy;
+      const pulse=0.25+0.75*Math.abs(Math.sin(t*0.7+col*0.3+row*0.5));
+      ctx.strokeStyle=GOLD+(0.045*pulse)+')'; ctx.lineWidth=0.5;
+      ctx.beginPath();
+      for(let i=0;i<6;i++){ const a=(i/6)*Math.PI*2-Math.PI/6; i===0?ctx.moveTo(ox+Math.cos(a)*R,oy+Math.sin(a)*R):ctx.lineTo(ox+Math.cos(a)*R,oy+Math.sin(a)*R); }
+      ctx.closePath(); ctx.stroke();
+    }
+    [W*0.07,W*0.93].forEach((rx,ri)=>{
+      ctx.save(); ctx.translate(rx,H/2); ctx.rotate(t*(ri?-0.3:0.3));
+      ctx.strokeStyle=BLUE+'0.12)'; ctx.lineWidth=0.9;
+      for(let i=0;i<4;i++){ const a=(i/4)*Math.PI*2; ctx.beginPath(); ctx.arc(Math.cos(a)*13,Math.sin(a)*13,4,0,Math.PI*2); ctx.stroke(); }
+      ctx.beginPath(); ctx.arc(0,0,5,0,Math.PI*2); ctx.strokeStyle=GOLD+'0.18)'; ctx.stroke();
+      ctx.restore();
+    });
+  }
+
+  /* ── CERTS — Rotating compass + arcs ── */
+  function drawCerts(ctx,W,H,t){
+    [[55,H/2,35,0.38],[W-55,H/2,32,-0.28]].forEach(([cx,cy,r,spd])=>{
+      ctx.save(); ctx.translate(cx,cy); ctx.rotate(t*spd);
+      ctx.strokeStyle=GOLD+'0.12)'; ctx.lineWidth=0.8;
+      for(let i=0;i<8;i++){ const a=(i/8)*Math.PI*2; ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(Math.cos(a)*r,Math.sin(a)*r); ctx.stroke(); }
+      ctx.beginPath(); ctx.arc(0,0,r,0,Math.PI*2); ctx.strokeStyle=GOLD+'0.07)'; ctx.stroke();
+      ctx.beginPath(); ctx.arc(0,0,r*0.45,0,Math.PI*2); ctx.strokeStyle=GOLD+'0.1)'; ctx.stroke();
+      ctx.restore();
+      ctx.save(); ctx.translate(cx,cy); ctx.rotate(-t*spd*0.5);
+      for(let i=0;i<20;i++){ const a=(i/20)*Math.PI*2,r2=r+6; ctx.strokeStyle=GOLD+'0.07)'; ctx.lineWidth=0.5; ctx.beginPath(); ctx.moveTo(Math.cos(a)*r2,Math.sin(a)*r2); ctx.lineTo(Math.cos(a)*(r2+4),Math.sin(a)*(r2+4)); ctx.stroke(); }
+      ctx.restore();
+    });
+    const sa=(t*0.5)%(Math.PI*2);
+    ctx.strokeStyle=GOLD+'0.07)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.arc(W/2,H/2,W*0.36,sa,sa+Math.PI*0.55); ctx.stroke();
+  }
+
+  /* ── PROJECTS — Isometric 3D building wireframes ── */
+  function drawProjects(ctx,W,H,t){
+    function iso(x,y,z){ return {px:W/2+(x-z)*26,py:H/2+(x+z)*13-y*22}; }
+    const ang=t*0.22,ca=Math.cos(ang),sa=Math.sin(ang);
+    function box(ox,oy,oz,bx,by,bz,alpha){
+      const v=[[ox,oy,oz],[ox+bx,oy,oz],[ox+bx,oy,oz+bz],[ox,oy,oz+bz],[ox,oy+by,oz],[ox+bx,oy+by,oz],[ox+bx,oy+by,oz+bz],[ox,oy+by,oz+bz]];
+      [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a,b])=>{
+        const pa=iso(v[a][0]*ca-v[a][2]*sa,v[a][1],v[a][0]*sa+v[a][2]*ca);
+        const pb=iso(v[b][0]*ca-v[b][2]*sa,v[b][1],v[b][0]*sa+v[b][2]*ca);
+        ctx.strokeStyle=GOLD+alpha+')'; ctx.lineWidth=0.7;
+        ctx.beginPath(); ctx.moveTo(pa.px,pa.py); ctx.lineTo(pb.px,pb.py); ctx.stroke();
+      });
+    }
+    box(-1.5,0,-1.5,1,3,1,'0.07'); box(0.2,0,-1.5,0.8,2,0.8,'0.05'); box(-1.5,0,0.2,0.8,1.5,0.8,'0.04');
+    const sc=(t*18)%28;
+    for(let gx=-W;gx<W*2;gx+=28){
+      const p1=iso((gx-sc)/28,0,-4),p2=iso((gx-sc)/28,0,4);
+      ctx.strokeStyle=BLUE+'0.035)'; ctx.lineWidth=0.5;
+      ctx.beginPath(); ctx.moveTo(p1.px,p1.py); ctx.lineTo(p2.px,p2.py); ctx.stroke();
+    }
+  }
+
+  /* ── WHY — Converging steel truss in perspective ── */
+  function drawWhy(ctx,W,H,t){
+    const vp={x:W/2,y:H*3},dep=5;
+    function persp(x,y,z){ const s=dep/(dep+z); return {x:vp.x+(x-vp.x)*s,y:vp.y+(y-vp.y)*s}; }
+    const cols=10,rows=3;
+    for(let c=0;c<=cols;c++) for(let r=0;r<=rows;r++){
+      const wx=(c/cols)*W,wy=(r/rows)*H;
+      for(let z=0;z<3;z++){
+        const p=persp(wx,wy,z*1.3),p2=persp(wx,wy,(z+1)*1.3);
+        const pulse=0.3+0.4*Math.abs(Math.sin(t*0.5+c*0.4+r*0.7+z));
+        ctx.strokeStyle=GOLD+(0.038*pulse)+')'; ctx.lineWidth=0.55;
+        ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(p2.x,p2.y); ctx.stroke();
+        if(z===0){ ctx.beginPath(); ctx.arc(p.x,p.y,1.5,0,Math.PI*2); ctx.fillStyle=GOLD+(0.1*pulse)+')'; ctx.fill(); }
+      }
+    }
+    for(let r=0;r<=rows;r++) for(let z=0;z<3;z++){
+      const pL=persp(0,(r/rows)*H,z*1.3),pR=persp(W,(r/rows)*H,z*1.3);
+      ctx.strokeStyle=GOLD+'0.025)'; ctx.lineWidth=0.5;
+      ctx.beginPath(); ctx.moveTo(pL.x,pL.y); ctx.lineTo(pR.x,pR.y); ctx.stroke();
+    }
+  }
+
+  /* ── SERVICES — BOQ dimension lines ── */
+  function drawServices(ctx,W,H,t){
+    [0.12,0.3,0.5,0.7,0.88].forEach((lx,i)=>{
+      const x=lx*W, wave=Math.sin(t*0.5+i*1.1)*7;
+      const alpha=0.07*(0.5+0.5*Math.abs(Math.sin(t*0.4+i)));
+      ctx.strokeStyle=GOLD+alpha+')'; ctx.lineWidth=0.65; ctx.setLineDash([4,4]);
+      ctx.beginPath(); ctx.moveTo(x,wave); ctx.lineTo(x,H+wave); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.beginPath(); ctx.moveTo(x-5,2+wave); ctx.lineTo(x+5,2+wave); ctx.moveTo(x-5,H-2+wave); ctx.lineTo(x+5,H-2+wave); ctx.stroke();
+    });
+    const sc=(t*12)%W;
+    ctx.strokeStyle=GOLD+'0.06)'; ctx.lineWidth=0.5; ctx.setLineDash([6,18]); ctx.lineDashOffset=-sc;
+    ctx.beginPath(); ctx.moveTo(0,H*0.5); ctx.lineTo(W,H*0.5); ctx.stroke();
+    ctx.setLineDash([]); ctx.lineDashOffset=0;
+    for(let row=0;row<3;row++) for(let col=0;col<7;col++){
+      ctx.fillStyle=GOLD+'0.032)'; ctx.fillRect(W*0.12+col*W*0.11,(H*(0.2+row*0.3)),W*0.09,2);
+    }
+  }
+
+  /* ── TOOLS — Gears + circuit traces ── */
+  function drawTools(ctx,W,H,t){
+    function gear(cx,cy,R,r,teeth,rot,alpha){
+      ctx.strokeStyle=GOLD+alpha+')'; ctx.lineWidth=0.8; ctx.beginPath();
+      const step=Math.PI*2/teeth;
+      for(let i=0;i<teeth;i++){
+        const a1=rot+i*step,a2=a1+step*0.35,a3=a1+step*0.65;
+        ctx.lineTo(Math.cos(a1)*r+cx,Math.sin(a1)*r+cy);
+        ctx.lineTo(Math.cos(a1)*R+cx,Math.sin(a1)*R+cy);
+        ctx.lineTo(Math.cos(a2)*R+cx,Math.sin(a2)*R+cy);
+        ctx.lineTo(Math.cos(a3)*r+cx,Math.sin(a3)*r+cy);
+      }
+      ctx.closePath(); ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx,cy,r*0.4,0,Math.PI*2); ctx.stroke();
+    }
+    gear(55,H/2,34,24,12,t*0.5,'0.1'); gear(55+52,H/2,20,15,8,-t*0.82,'0.07');
+    gear(W-55,H/2,30,22,10,-t*0.45,'0.09'); gear(W-55-46,H/2,19,14,7,t*0.72,'0.06');
+    const nodes3=[{x:W*0.3,y:H*0.3},{x:W*0.5,y:H*0.7},{x:W*0.65,y:H*0.25},{x:W*0.45,y:H*0.5}];
+    nodes3.forEach((n,i)=>{
+      const nx=nodes3[(i+1)%nodes3.length];
+      ctx.strokeStyle=BLUE+'0.055)'; ctx.lineWidth=0.6;
+      ctx.beginPath(); ctx.moveTo(n.x,n.y); ctx.lineTo(nx.x,n.y); ctx.lineTo(nx.x,nx.y); ctx.stroke();
+      const pulse=0.4+0.6*Math.abs(Math.sin(t*1.2+i*0.8));
+      ctx.beginPath(); ctx.arc(n.x,n.y,3,0,Math.PI*2); ctx.fillStyle=GOLD+(0.12*pulse)+')'; ctx.fill();
+    });
+  }
+
+  /* ── CONTACT — Crane arm + building silhouette ── */
+  function drawContact(ctx,W,H,t){
+    const craneCX=W*0.1,craneCY=H*0.88;
+    const swingA=Math.sin(t*0.35)*0.2-0.1;
+    ctx.strokeStyle=GOLD+'0.1)'; ctx.lineWidth=1.2;
+    ctx.beginPath(); ctx.moveTo(craneCX,craneCY); ctx.lineTo(craneCX,craneCY-80); ctx.stroke();
+    const jibEX=craneCX+Math.cos(swingA-Math.PI/2)*100, jibEY=craneCY-80+Math.sin(swingA-Math.PI/2)*100;
+    ctx.beginPath(); ctx.moveTo(craneCX,craneCY-80); ctx.lineTo(jibEX,jibEY); ctx.stroke();
+    const drop=18+Math.sin(t*0.6)*9;
+    const hookX=craneCX+Math.cos(swingA-Math.PI/2)*70, hookY=craneCY-80+Math.sin(swingA-Math.PI/2)*70;
+    ctx.strokeStyle=GOLD+'0.07)'; ctx.lineWidth=0.7; ctx.setLineDash([2,2]);
+    ctx.beginPath(); ctx.moveTo(hookX,hookY); ctx.lineTo(hookX,hookY+drop); ctx.stroke(); ctx.setLineDash([]);
+    const bx=W*0.8,by=H*0.15,bW=55,bH=H*0.75;
+    ctx.strokeStyle=GOLD+'0.07)'; ctx.lineWidth=0.8; ctx.strokeRect(bx,by,bW,bH);
+    for(let f=1;f<7;f++){ ctx.beginPath(); ctx.moveTo(bx,by+f*(bH/7)); ctx.lineTo(bx+bW,by+f*(bH/7)); ctx.strokeStyle=GOLD+'0.04)'; ctx.stroke(); }
+    for(let c=0;c<3;c++) for(let r=0;r<6;r++){
+      if(Math.sin(t*1.1+c*1.4+r*0.9)>0){ ctx.fillStyle=GOLD+'0.06)'; ctx.fillRect(bx+4+c*16,by+6+r*(bH/7),10,7); }
+    }
+    ctx.strokeStyle=GOLD+'0.05)'; ctx.lineWidth=0.6; ctx.setLineDash([5,5]);
+    ctx.beginPath(); ctx.moveTo(0,H*0.95); ctx.lineTo(W,H*0.95); ctx.stroke(); ctx.setLineDash([]);
+    const pt=(t*38)%W;
+    [0,W*0.4].forEach(offset=>{ ctx.beginPath(); ctx.arc((pt+offset)%W,H*0.5,2,0,Math.PI*2); ctx.fillStyle=GOLD+'0.13)'; ctx.fill(); });
+  }
+
+  function init(){
+    attachHeadingCanvas(document.getElementById('aboutHeading'), drawAbout, 80);
+    attachHeadingCanvas(document.getElementById('aboutMainHeading'), drawAbout, 120);
+    attachHeadingCanvas(document.getElementById('skillsHeading'), drawSkills, 120);
+    attachHeadingCanvas(document.getElementById('certsHeading'), drawCerts, 120);
+    attachHeadingCanvas(document.getElementById('projectsHeading'), drawProjects, 140);
+    attachHeadingCanvas(document.getElementById('whyHeading'), drawWhy, 130);
+    attachHeadingCanvas(document.getElementById('servicesHeading'), drawServices, 120);
+    attachHeadingCanvas(document.getElementById('toolsHeading'), drawTools, 120);
+    attachHeadingCanvas(document.getElementById('contactHeading'), drawContact, 180);
+  }
+
+  document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',init) : init();
+})();
+</script>
+</body>
+</html>
